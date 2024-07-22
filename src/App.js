@@ -5,7 +5,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <a>
-          Gemini API 프로젝트 / TagDoctor
+           Gemini API & TagDoctor
         </a>
       </header>
     </div>
