@@ -43,7 +43,7 @@ const TagFunction = () => {
         <input
           type="text"
           className="search-input"
-          placeholder="🔍"
+          placeholder="🔍" // 디자인 변경 예정
           readOnly
           value="" // 검색창 빈 텍스트
         />
