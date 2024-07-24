@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+/* 전체 컨테이너 스타일 */
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* 상단 정렬로 변경 */
+  height: 100vh;
+  width: 100vw;
+  background: #f5f5f5; /* 전체 배경색 설정 */
+  overflow: hidden; /* 화면 넘침 방지 */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 비율을 유지하는 컨테이너 */
+.ratio-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 720px; /* 최대 너비 설정 */
+  min-height: 100%; /* 최소 높이를 100%로 설정하여 화면에 맞춤 */
+  background: #ffffff; /* 컨텐츠 배경색 설정 */
+  border-radius: 10px; /* 둥근 모서리 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
+  box-sizing: border-box; /* 여백과 테두리를 포함하여 크기 계산 */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* 실제 컨텐츠를 넣는 부분 */
+.content {
+  flex: 1; /* 남은 공간을 차지하도록 설정 */
+  display: flex;
+  flex-direction: column;
+  padding: 10px; /* 내부 여백 추가 */
+  box-sizing: border-box; /* 여백과 테두리를 포함하여 크기 계산 */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 헤더 스타일 */
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  position: relative; /* 느낌표 아이콘의 위치를 상대적으로 설정 */
+}
+
+/* 느낌표 아이콘 스타일 */
+.notification-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #cfcfff; /* 원하는 색상으로 설정 */
+  border-radius: 20%;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px; /* 상단 여백 설정 */
+  left: 10px; /* 왼쪽 여백 설정 */
 }
 
-.App-link {
-  color: #61dafb;
+/* 로고 컨테이너 스타일 */
+.logo-container {
+  margin: 40px 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo {
+  width: 180px;
+  height: 180px;
+  background-color: #cfcfff; /* 원하는 색상으로 설정 */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+/* 검색창 스타일 */
+.search-container {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  width: 80%;
+  height: 50px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  padding: 0 10px;
+  font-size: 1.5rem;
+}
+
+/* 선택 항목 컨테이너 스타일 */
+.selection-container {
+  display: flex;
+  flex-wrap: wrap; /* 항목이 넘칠 경우 자동 줄 바꿈 */
+  justify-content: center; /* 가운데 정렬 */
+}
+
+/* 선택 항목 스타일 */
+.selection-item {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 15px;
+  background-color: #cccccc; /* 원하는 색상으로 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
 }
