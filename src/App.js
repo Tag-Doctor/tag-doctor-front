@@ -1,5 +1,7 @@
+// src/App.js
 import React from 'react';
 import './styles/App.css';
+import TagFunction from './components/TagFunction';
 
 const App = () => {
   return (
@@ -13,15 +15,8 @@ const App = () => {
             <div className="logo-container">
               <div className="logo">Logo</div>
             </div>
-            <div className="search-container">
-              <input type="text" className="search-input" placeholder="🔍" />
-            </div>
-            <div className="selection-container">
-              <div className="selection-item">상체</div>
-              <div className="selection-item">하체</div>
-              {/* 필요에 따라 더 많은 선택 항목을 추가하세요 */}
-            </div>
           </header>
+          <TagFunction />
         </div>
       </div>
     </div>

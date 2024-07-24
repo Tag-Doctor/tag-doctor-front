@@ -1,11 +1,13 @@
+/* src/styles/App.css */
+
 /* 전체 컨테이너 스타일 */
 .app-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* 상단 정렬로 변경 */
+  align-items: flex-start; /* 상단 정렬 */
   height: 100vh;
   width: 100vw;
-  background: #f5f5f5; /* 전체 배경색 설정 */
+  background: #f5f5f5; /* 전체 배경색 */
   overflow: hidden; /* 화면 넘침 방지 */
 }
 
@@ -14,12 +16,12 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 720px; /* 최대 너비 설정 */
-  min-height: 100%; /* 최소 높이를 100%로 설정하여 화면에 맞춤 */
-  background: #ffffff; /* 컨텐츠 배경색 설정 */
+  max-width: 720px; /* 최대 너비 */
+  min-height: 100%; /* 최소 높이 100% */
+  background: #ffffff; /* 컨텐츠 배경색 */
   border-radius: 10px; /* 둥근 모서리 */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  box-sizing: border-box; /* 여백과 테두리를 포함하여 크기 계산 */
+  box-sizing: border-box; /* 여백과 테두리 포함하여 크기 계산 */
 }
 
 /* 실제 컨텐츠를 넣는 부분 */
@@ -27,8 +29,8 @@
   flex: 1; /* 남은 공간을 차지하도록 설정 */
   display: flex;
   flex-direction: column;
-  padding: 10px; /* 내부 여백 추가 */
-  box-sizing: border-box; /* 여백과 테두리를 포함하여 크기 계산 */
+  padding: 10px; /* 내부 여백 */
+  box-sizing: border-box; /* 여백과 테두리 포함하여 크기 계산 */
 }
 
 /* 헤더 스타일 */
@@ -44,7 +46,7 @@
 .notification-icon {
   width: 50px;
   height: 50px;
-  background-color: #cfcfff; /* 원하는 색상으로 설정 */
+  background-color: #cfcfff; /* 원하는 색상 */
   border-radius: 20%;
   display: flex;
   justify-content: center;
@@ -52,8 +54,8 @@
   color: #fff;
   font-size: 1.5rem;
   position: absolute;
-  top: 10px; /* 상단 여백 설정 */
-  left: 10px; /* 왼쪽 여백 설정 */
+  top: 10px; /* 상단 여백 */
+  left: 10px; /* 왼쪽 여백 */
 }
 
 /* 로고 컨테이너 스타일 */
@@ -64,7 +66,7 @@
 .logo {
   width: 180px;
   height: 180px;
-  background-color: #cfcfff; /* 원하는 색상으로 설정 */
+  background-color: #cfcfff; /* 원하는 색상 */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -73,22 +75,37 @@
   font-size: 1.5rem;
 }
 
-/* 검색창 스타일 */
-.search-container {
-  margin: 20px 0;
-  width: 100%;
+/* 태그 표시 영역 */
+.tags-display {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  right: 10px;
+  bottom: 5px;
+  overflow: hidden;
 }
 
-.search-input {
-  width: 80%;
-  height: 50px;
+/* 태그 아이템 스타일 */
+.tag-item {
+  display: flex;
+  align-items: center;
+  background-color: #cfcfff; /* 배경색 설정 */
   border-radius: 15px;
-  border: 1px solid #ccc;
-  padding: 0 10px;
-  font-size: 1.5rem;
+  padding: 5px 10px;
+  margin: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  margin-right: 5px; /* 태그 사이 간격 */
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 /* 선택 항목 컨테이너 스타일 */
@@ -104,7 +121,7 @@
   height: 100px;
   margin: 10px;
   border-radius: 15px;
-  background-color: #cccccc; /* 원하는 색상으로 설정 */
+  background-color: #cccccc; /* 원하는 색상 */
   display: flex;
   justify-content: center;
   align-items: center;
