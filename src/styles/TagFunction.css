@@ -57,3 +57,48 @@
     font-size: 1.2rem;
     cursor: pointer;
 }
+
+/* 선택 항목 컨테이너 스타일 */
+.selection-container {
+    display: flex;
+    flex-wrap: wrap; /* 항목이 넘칠 경우 자동 줄 바꿈 */
+    justify-content: center; /* 가운데 정렬 */
+}
+
+/* 선택 항목 스타일 */
+.selection-item {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #cccccc; /* 원하는 색상 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* 하위 선택 항목 컨테이너 스타일 */
+.sub-selection-container {
+    display: flex;
+    flex-wrap: wrap; /* 항목이 넘칠 경우 자동 줄 바꿈 */
+    justify-content: center; /* 가운데 정렬 */
+    margin-top: 20px; /* 상단 여백 */
+}
+
+/* 하위 선택 항목 스타일 */
+.sub-selection-item {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #eeeeee; /* 원하는 색상 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-align: center;
+}
