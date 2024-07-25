@@ -1,30 +1,32 @@
 import React, { useState } from 'react';
 import '../styles/TagFunction.css';
 
-const TagFunction = () => {
+const App = () => {
+  const [step, setStep] = useState(1);
   const [tags, setTags] = useState([]);
   const [currentSelection, setCurrentSelection] = useState([]);
 
   const tagHierarchy = {
-    상체: ['얼굴', '복부', '팔', '가슴', '머리', '등'],
-    하체: ['허벅지', '발', '엉덩이', '무릎', '생식기', '정강이'],
-    얼굴: ['입', '코', '귀', '눈', '턱', '이'],
-    복부: ['명치', '윗배', '아랫배', '복근'],
-    팔: ['어깨', '상박', '하박', '팔꿈치', '손목', '손가락'],
-    가슴: ['폐', '갈비뼈', '심장', '쇄골'],
-    머리: ['입', '코', '귀', '눈', '턱', '이'],
-    등: ['견갑', '요추', '허리', '목덜미', '겨드랑이'],
-    허벅지: ['앞허벅지', '뒷허벅지', '안쪽 허벅지', '바깥쪽 허벅지'],
-    발: ['발바닥', '발목안쪽', '발목 바깥쪽', '발등', '발가락'],
-    엉덩이: ['항문', '꼬리뼈', '엉덩이'],
-    무릎: ['무릎 앞', '무릎 뒤', '무릎 안쪽', '무릎 바깥쪽'],
-    생식기: ['전립선', '요로', '방광'],
-    정강이: ['앞정강이', '뒷정강이', '안쪽 정강이', '바깥쪽 정강이'],
+    'Upper half of the body': ['Face', 'Abdomen', 'Arms', 'Chest', 'Head', 'Back'],
+    'Lower half of the body': ['Thigh', 'Foot', 'Buttocks', 'Knee', 'Genital', 'Shin'],
+    'Face': ['Mouth', 'Nose', 'Ear', 'Eye', 'Jaw', 'Teeth'],
+    'Abdomen': ['Pit of the stomach', 'Upper abdomen', 'Lower abdomen', 'Abs'],
+    'Arms': ['Shoulder', 'Upper arm', 'Forearm', 'Elbow', 'Wrist', 'Finger'],
+    'Chest': ['Lung', 'Rib', 'Heart', 'Clavicle'],
+    'Head': ['Mouth', 'Nose', 'Ear', 'Eye', 'Jaw', 'Teeth'],
+    'Back': ['Shoulder blade', 'Lumbar', 'Waist', 'Nape', 'Armpit'],
+    'Thigh': ['Front thigh', 'Back thigh', 'Inner thigh', 'Outer thigh'],
+    'Foot': ['Sole', 'Inner ankle', 'Outer ankle', 'Instep', 'Toe'],
+    'Buttocks': ['Anus', 'Coccyx', 'Buttock'],
+    'Knee': ['Front knee', 'Back knee', 'Inner knee', 'Outer knee'],
+    'Genital': ['Prostate', 'Urethra', 'Bladder'],
+    'Shin': ['Front shin', 'Back shin', 'Inner shin', 'Outer shin']
   };
 
   const handleTagClick = (tag) => {
     if (tagHierarchy[tag]) {
       setCurrentSelection(tagHierarchy[tag]);
+      setStep(step + 1);
     } else {
       if (!tags.includes(tag)) {
         setTags((prevTags) => [...prevTags, tag]);
@@ -37,41 +39,68 @@ const TagFunction = () => {
     setTags((prevTags) => prevTags.filter(tag => tag !== tagToRemove));
   };
 
+  const handleNextClick = () => {
+    if (step < 5) setStep(step + 1);
+  };
+
+  const handlePreviousClick = () => {
+    if (step > 1) setStep(step - 1);
+  };
+
+  const handleSkipClick = () => {
+    setStep(5);
+  };
+
   return (
-    <div className="tag-function-container">
-      <div className="search-input-container">
-        <input
-          type="text"
-          className="search-input"
-          placeholder="🔍" // 디자인 변경 예정
-          readOnly
-          value="" // 검색창 빈 텍스트
-        />
-        <div className="tags-display">
-          {tags.map((tag, index) => (
-            <div key={index} className="tag-item">
-              <span className="tag-text">#{tag}</span>
-              <button className="remove-btn" onClick={() => handleTagRemove(tag)}>x</button>
-            </div>
+    <div className="app-container">
+      <div className="ratio-container">
+        <div className="progress-bar">
+          {[1, 2, 3, 4, 5].map((s) => (
+            <div key={s} className={`progress-step ${step >= s ? 'active' : ''}`}></div>
           ))}
+        </div>
+        <div className={`screen ${step === 1 ? 'active' : ''}`}>
+          <h2>Your age?</h2>
+          <div className="button-group">
+            <button onClick={() => handleTagClick('Less than 12')}>Less than 12</button>
+            <button onClick={() => handleTagClick('12-19')}>12-19</button>
+            <button onClick={() => handleTagClick('20-29')}>20-29</button>
+            <button onClick={() => handleTagClick('30-39')}>30-39</button>
+            <button onClick={() => handleTagClick('40-49')}>40-49</button>
+            <button onClick={() => handleTagClick('50-59')}>50-59</button>
+            <button onClick={() => handleTagClick('60-69')}>60-69</button>
+            <button onClick={() => handleTagClick('70 or older')}>70 or older</button>
+          </div>
+        </div>
+        <div className={`screen ${step === 2 ? 'active' : ''}`}>
+          <h2>The upper and lower parts of the body</h2>
+          <button onClick={() => handleTagClick('Upper half of the body')}>Upper half of the body</button>
+          <button onClick={() => handleTagClick('Lower half of the body')}>Lower half of the body</button>
+        </div>
+        <div className={`screen ${step === 3 ? 'active' : ''}`}>
+          <h2>Which part? (1)</h2>
+          {currentSelection.map((subTag, index) => (
+            <button key={index} onClick={() => handleTagClick(subTag)}>{subTag}</button>
+          ))}
+        </div>
+        <div className={`screen ${step === 4 ? 'active' : ''}`}>
+          <h2>Which part? (2)</h2>
+          {currentSelection.map((subTag, index) => (
+            <button key={index} onClick={() => handleTagClick(subTag)}>{subTag}</button>
+          ))}
+        </div>
+        <div className={`screen ${step === 5 ? 'active' : ''}`}>
+          <h2>This is the last one!</h2>
+          <input type="text" className="search-input" placeholder="Please write it down in detail." />
+        </div>
+        <div className="navigation-buttons">
+          <button onClick={handlePreviousClick}>Previous</button>
+          <button onClick={handleNextClick}>Next</button>
+          <button onClick={handleSkipClick}>Skip</button>
         </div>
       </div>
-      {currentSelection.length > 0 ? (
-        <div className="sub-selection-container">
-          {currentSelection.map((subTag, index) => (
-            <div key={index} onClick={() => handleTagClick(subTag)} className="sub-selection-item">
-              {subTag}
-            </div>
-          ))}
-        </div>
-      ) : (
-        <div className="selection-container">
-          <div onClick={() => handleTagClick('상체')} className="selection-item">상체</div>
-          <div onClick={() => handleTagClick('하체')} className="selection-item">하체</div>
-        </div>
-      )}
     </div>
   );
 };
 
-export default TagFunction;
+export default App;

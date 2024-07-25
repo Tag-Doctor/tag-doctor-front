@@ -1,104 +1,91 @@
-/* 검색창 스타일 */
-.search-input-container {
+/* Main container */
+.app-container {
     display: flex;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 15px;
-    padding: 5px;
-    width: 100%; /* 흰색 배경의 100% 너비로 설정 */
-    max-width: 1000px; /* 최대 너비 설정 */
-    background-color: #ffffff;
-    position: relative;
-    box-sizing: border-box; /* 패딩과 테두리를 포함하여 크기 계산 */
-}
-
-.search-input {
-    border: none;
-    outline: none;
-    width: 100%;
-    height: 50px;
-    font-size: 1.5rem;
-    padding: 0 10px;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-}
-
-/* 태그 표시 영역 */
-.tags-display {
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    top: 5px;
-    left: 10px;
-    right: 10px;
-    bottom: 5px;
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(135deg, #132D46, #191E29);
     overflow: hidden;
-}
-
-/* 태그 아이템 스타일 */
-.tag-item {
+    color: #FFFFFF;
+  }
+  
+  /* Ratio container */
+  .ratio-container {
     display: flex;
-    align-items: center;
-    background-color: #cfcfff; /* 배경색 설정 */
-    border-radius: 15px;
-    padding: 5px 10px;
-    margin: 5px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    font-size: 1rem;
-    margin-right: 5px; /* 태그 사이 간격 */
-}
-
-.remove-btn {
-    background: none;
-    border: none;
-    color: red;
-    font-size: 1.2rem;
-    cursor: pointer;
-}
-
-/* 선택 항목 컨테이너 스타일 */
-.selection-container {
-    display: flex;
-    flex-wrap: wrap; /* 항목이 넘칠 경우 자동 줄 바꿈 */
-    justify-content: center; /* 가운데 정렬 */
-}
-
-/* 선택 항목 스타일 */
-.selection-item {
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-    border-radius: 15px;
-    background-color: #cccccc; /* 원하는 색상 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1rem;
-    cursor: pointer;
-    text-align: center;
-}
-
-/* 하위 선택 항목 컨테이너 스타일 */
-.sub-selection-container {
-    display: flex;
-    flex-wrap: wrap; /* 항목이 넘칠 경우 자동 줄 바꿈 */
-    justify-content: center; /* 가운데 정렬 */
-    margin-top: 20px; /* 상단 여백 */
-}
-
-/* 하위 선택 항목 스타일 */
-.sub-selection-item {
-    width: 80px;
-    height: 80px;
-    margin: 5px;
+    flex-direction: column;
+    width: 100%;
+    max-width: 720px;
+    min-height: 100%;
+    background: #132D46;
     border-radius: 10px;
-    background-color: #eeeeee; /* 원하는 색상 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Progress bar */
+  .progress-bar {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.9rem;
+    justify-content: space-between;
+    padding: 10px;
+  }
+  
+  .progress-step {
+    width: 20px;
+    height: 20px;
+    background: #696E79;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(1, 195, 141, 0.5);
+  }
+  
+  .progress-step.active {
+    background: #01C38D;
+  }
+  
+  /* Button styles */
+  button {
+    background: #01C38D;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
     cursor: pointer;
-    text-align: center;
-}
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(1, 195, 141, 0.5);
+  }
+  
+  button:hover {
+    background: #01a77c;
+  }
+  
+  /* Screen styles */
+  .screen {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .screen.active {
+    display: flex;
+  }
+  
+  /* Input styles */
+  .search-input {
+    padding: 10px;
+    border: 2px solid #01C38D;
+    border-radius: 5px;
+    width: 80%;
+    margin-top: 20px;
+    background: #191E29;
+    color: #FFFFFF;
+  }
+  
+  .search-input::placeholder {
+    color: #696E79;
+  }
+  

@@ -1,86 +1,104 @@
-/* 전체 컨테이너 스타일 */
+/* Main container */
 .app-container {
   display: flex;
   justify-content: center;
-  align-items: flex-start; /* 상단 정렬 */
+  align-items: center;
   height: 100vh;
   width: 100vw;
-  background: #f5f5f5; /* 전체 배경색 */
-  overflow: hidden; /* 화면 넘침 방지 */
+  background: linear-gradient(135deg, #132D46, #191E29);
+  overflow: hidden;
+  color: #FFFFFF;
 }
 
-/* 비율을 유지하는 컨테이너 */
+/* Ratio container */
 .ratio-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 720px; /* 최대 너비 */
-  min-height: 100%; /* 최소 높이 100% */
-  background: #ffffff; /* 컨텐츠 배경색 */
-  border-radius: 10px; /* 둥근 모서리 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  box-sizing: border-box; /* 여백과 테두리 포함하여 크기 계산 */
+  max-width: 720px;
+  min-height: 100%;
+  background: #132D46;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
 }
 
-/* 실제 컨텐츠를 넣는 부분 */
-.content {
-  flex: 1; /* 남은 공간을 차지하도록 설정 */
+/* Progress bar */
+.progress-bar {
   display: flex;
-  flex-direction: column;
-  padding: 10px; /* 내부 여백 */
-  box-sizing: border-box; /* 여백과 테두리 포함하여 크기 계산 */
+  justify-content: space-between;
+  padding: 10px;
 }
 
-/* 헤더 스타일 */
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  position: relative; /* 느낌표 아이콘의 위치를 상대적으로 설정 */
-}
-
-/* 느낌표 아이콘 스타일 */
-.notification-icon {
-  width: 50px;
-  height: 50px;
-  background-color: #cfcfff; /* 원하는 색상 */
-  border-radius: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
-  font-size: 1.5rem;
-  position: absolute;
-  top: 10px; /* 상단 여백 */
-  left: 10px; /* 왼쪽 여백 */
-}
-
-/* 로고 컨테이너 스타일 */
-.logo-container {
-  margin: 40px 0;
-}
-
-.logo {
-  width: 180px;
-  height: 180px;
-  background-color: #cfcfff; /* 원하는 색상 */
+.progress-step {
+  width: 20px;
+  height: 20px;
+  background: #696E79;
   border-radius: 50%;
-  display: flex;
+  box-shadow: 0 0 10px rgba(1, 195, 141, 0.5);
+}
+
+.progress-step.active {
+  background: #01C38D;
+}
+
+/* Button styles */
+button {
+  background: #01C38D;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(1, 195, 141, 0.5);
+}
+
+button:hover {
+  background: #01a77c;
+}
+
+/* Screen styles */
+.screen {
+  display: none;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  padding: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.screen.active {
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Input styles */
+.search-input {
+  padding: 10px;
+  border: 2px solid #01C38D;
+  border-radius: 5px;
+  width: 80%;
+  margin-top: 20px;
+  background: #191E29;
+  color: #FFFFFF;
 }
+
+.search-input::placeholder {
+  color: #696E79;
+}
+
+/* Navigation buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px;
+}
+
+.navigation-buttons button {
+  flex: 1;
+  margin: 0 5px;
+}
+
