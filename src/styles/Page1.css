@@ -1,138 +1,207 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #132D46, #191E29);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    position: relative; /* 절대 위치 요소를 위한 상대 위치 설정 */
-  }
-  
-  .container {
-    text-align: center;
-    position: relative; /* 자식 요소의 절대 위치를 위한 설정 */
-    padding-top: 60px; /* 텍스트와 버튼들 사이의 공간 확보 */
-  }
-  
-  .progress {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .progress-step {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #555;
-    margin: 0 5px;
-    position: relative;
-  }
-  
-  .progress-step.active {
-    background-color: #01C38D;
-  }
-  
-  .progress-step.active:after {
-    content: '';
-    width: 20px;
-    height: 20px;
-    background: rgba(1, 195, 141, 0.3);
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    border-radius: 50%;
-    z-index: -1;
-  }
-  
-  h1 {
-    font-size: 2em;
-    margin-bottom: 20px;
-  }
-  
-  .age-buttons {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2열 */
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #132D46, #191E29);
+  height: 100vh;
+  color: #ffffff;
+  margin: 0; /* 기본 마진 제거 */
+  position: relative; /* 절대 위치 요소를 위한 상대 위치 설정 */
+}
+
+.age {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.progress-step {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #555;
+  margin: 0 5px;
+  position: relative;
+}
+
+.progress-step.active {
+  background-color: #01C38D;
+}
+
+.progress-step.active:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: rgba(1, 195, 141, 0.3);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.age-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 15px; /* 버튼 사이의 간격 증가 */
+  margin-bottom: 20px;
+}
+
+.age-button {
+  background-color: #696E79; /* 회색 색상 변경 */
+  color: #fff;
+  border: none; /* 테두리 제거 */
+  border-radius: 10px; /* 버튼 모서리 둥글게 조정 */
+  padding: 15px; /* 버튼의 크기를 키우기 위한 패딩 */
+  font-size: 1.2em; /* 텍스트 크기 증가 */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* 배경색과 클릭 시 효과 추가 */
+  text-align: center;
+}
+
+.age-button.selected {
+  background-color: #01C38D; /* 선택된 버튼 색상 유지 */
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: #fff;
+  border: none; /* 테두리 제거 */
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* 배경색과 클릭 시 효과 추가 */
+}
+
+.nav-button.next-button {
+  background-color: #01C38D;
+  color: #fff;
+}
+
+.nav-button:hover {
+  background-color: #01A376;
+}
+
+.nav-button:active {
+  transform: scale(0.95); /* 클릭 시 버튼 크기 축소 효과 */
+}
+
+.info-button {
+  background-color: #696E79; /* 회색 색상 변경 */
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: background-color 0.3s, transform 0.2s; /* 배경색과 클릭 시 효과 추가 */
+}
+
+.info-button:hover {
+  background-color: #555; /* 마우스 오버 시 색상 변경 */
+}
+
+.info-button:active {
+  background-color: #444; /* 클릭 시 색상 변경 */
+  transform: scale(0.95); /* 클릭 시 버튼 크기 축소 효과 */
+}
+
+.home-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.2s; /* 클릭 시 효과 추가 */
+}
+
+.home-button:hover {
+  transform: scale(1.1); /* 마우스 오버 시 크기 확대 */
+}
+
+.home-button:active {
+  transform: scale(0.95); /* 클릭 시 크기 축소 */
+}
+
+.home-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px; /* 위치를 하단에 고정 */
+  left: 50%; /* 중앙 정렬 */
+  transform: translateX(-50%); /* 중앙 정렬 */
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
   .age-button {
-    background-color: #444;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    text-align: center;
+    padding: 12px; /* 버튼 패딩 줄이기 */
+    font-size: 1em; /* 텍스트 크기 줄이기 */
   }
-  
-  .age-button.selected {
-    background-color: #01C38D;
-  }
-  
-  .navigation-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-  }
-  
+
   .nav-button {
-    background-color: #01C38D;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    padding: 8px 16px; /* 네비게이션 버튼 패딩 줄이기 */
   }
-  
-  .nav-button:hover {
-    background-color: #01A376;
-  }
-  
-  /* 버튼 위치 조정 */
+
   .info-button {
-    background-color: #555;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: absolute; /* 절대 위치 설정 */
-    top: 20px; /* 상단 여백 */
-    left: 20px; /* 왼쪽 여백 */
+    width: 30px; /* 아이콘 크기 줄이기 */
+    height: 30px;
+    font-size: 20px; /* 폰트 크기 줄이기 */
+    top: 15px; /* 위치 조정 */
+    left: 15px;
   }
-  
+
   .home-button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    position: absolute; /* 절대 위치 설정 */
-    top: 2px; /* 상단 여백 */
-    right: 2px; /* 오른쪽 여백 */
+    font-size: 14px; /* 홈 버튼 폰트 크기 줄이기 */
+    top: 15px; /* 위치 조정 */
+    right: 15px;
   }
-  
-  .home-logo {
-    width: 20px;
-    height: 20px;
-    margin-right: 8px;
+}
+
+@media (max-width: 480px) {
+  .age-button {
+    padding: 10px; /* 버튼 패딩 추가 줄이기 */
+    font-size: 0.9em; /* 텍스트 크기 줄이기 */
   }
-  
-  .footer {
-    margin-top: 20px;
+
+  .nav-button {
+    padding: 6px 12px; /* 네비게이션 버튼 패딩 줄이기 */
   }
-  
+
+  .info-button {
+    width: 25px; /* 아이콘 크기 더 줄이기 */
+    height: 25px;
+    font-size: 18px; /* 폰트 크기 더 줄이기 */
+  }
+
+  .home-button {
+    font-size: 12px; /* 홈 버튼 폰트 크기 줄이기 */
+  }
+}
