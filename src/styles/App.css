@@ -17,29 +17,27 @@ body {
 }
 
 .logo {
-  width: 40vw; /* Increased size based on viewport width */
-  max-width: 500px; /* Increased maximum size */
+  width: 40vw; 
+  max-width: 500px; 
   margin-bottom: 20px;
 }
 
 .start-button {
   background-color: #01C38D;
-  color: #ffffff; /* Changed text color to white */
-  font-size: 2vw; /* Adjusts size based on viewport width */
-  padding: 1.5vw 3vw; /* Adjusts padding based on viewport width */
+  color: #ffffff;
+  font-size: 2vw;
+  padding: 1.5vw 3vw; 
   border: none;
-  border-radius: 10px; /* Slightly more rounded corners */
+  border-radius: 10px; 
   cursor: pointer;
   text-transform: uppercase;
   margin-top: 20px;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  /* Remove box-shadow from default state */
   box-shadow: none; 
 }
 
 .start-button:hover {
   background-color: #01C38D;
   transform: scale(1.05);
-  /* Add box-shadow on hover state */
-  box-shadow: 0 0 30px #01C38D; /* Enhanced glowing effect */
+  box-shadow: 0 0 30px #01C38D; 
 }

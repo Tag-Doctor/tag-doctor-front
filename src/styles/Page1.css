@@ -3,8 +3,8 @@ body {
   background: linear-gradient(to bottom, #132D46, #191E29);
   height: 100vh;
   color: #ffffff;
-  margin: 0; /* 기본 마진 제거 */
-  position: relative; /* 절대 위치 요소를 위한 상대 위치 설정 */
+  margin: 0; 
+  position: relative;
 }
 
 .age {
@@ -46,25 +46,25 @@ body {
 
 .age-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 15px; /* 버튼 사이의 간격 증가 */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px; 
   margin-bottom: 20px;
 }
 
 .age-button {
-  background-color: #696E79; /* 회색 색상 변경 */
+  background-color: #696E79; 
   color: #fff;
-  border: none; /* 테두리 제거 */
-  border-radius: 10px; /* 버튼 모서리 둥글게 조정 */
-  padding: 15px; /* 버튼의 크기를 키우기 위한 패딩 */
-  font-size: 1.2em; /* 텍스트 크기 증가 */
+  border: none; 
+  border-radius: 10px; 
+  padding: 15px; 
+  font-size: 1.2em; 
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; /* 배경색과 클릭 시 효과 추가 */
+  transition: background-color 0.3s, transform 0.2s; 
   text-align: center;
 }
 
 .age-button.selected {
-  background-color: #01C38D; /* 선택된 버튼 색상 유지 */
+  background-color: #01C38D; 
 }
 
 .navigation-buttons {
@@ -77,11 +77,11 @@ body {
 .nav-button {
   background-color: transparent;
   color: #fff;
-  border: none; /* 테두리 제거 */
+  border: none; 
   border-radius: 5px;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; /* 배경색과 클릭 시 효과 추가 */
+  transition: background-color 0.3s, transform 0.2s; 
 }
 
 .nav-button.next-button {
@@ -94,11 +94,11 @@ body {
 }
 
 .nav-button:active {
-  transform: scale(0.95); /* 클릭 시 버튼 크기 축소 효과 */
+  transform: scale(0.95); 
 }
 
 .info-button {
-  background-color: #696E79; /* 회색 색상 변경 */
+  background-color: #696E79; 
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -112,16 +112,16 @@ body {
   position: absolute;
   top: 20px;
   left: 20px;
-  transition: background-color 0.3s, transform 0.2s; /* 배경색과 클릭 시 효과 추가 */
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .info-button:hover {
-  background-color: #555; /* 마우스 오버 시 색상 변경 */
+  background-color: #555; 
 }
 
 .info-button:active {
-  background-color: #444; /* 클릭 시 색상 변경 */
-  transform: scale(0.95); /* 클릭 시 버튼 크기 축소 효과 */
+  background-color: #444; 
+  transform: scale(0.95); 
 }
 
 .home-button {
@@ -135,15 +135,15 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  transition: transform 0.2s; /* 클릭 시 효과 추가 */
+  transition: transform 0.2s; 
 }
 
 .home-button:hover {
-  transform: scale(1.1); /* 마우스 오버 시 크기 확대 */
+  transform: scale(1.1); 
 }
 
 .home-button:active {
-  transform: scale(0.95); /* 클릭 시 크기 축소 */
+  transform: scale(0.95); 
 }
 
 .home-logo {
@@ -154,54 +154,54 @@ body {
 
 .footer {
   position: absolute;
-  bottom: 10px; /* 위치를 하단에 고정 */
-  left: 50%; /* 중앙 정렬 */
-  transform: translateX(-50%); /* 중앙 정렬 */
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
 }
 
-/* 반응형 디자인 */
+
 @media (max-width: 768px) {
   .age-button {
-    padding: 12px; /* 버튼 패딩 줄이기 */
-    font-size: 1em; /* 텍스트 크기 줄이기 */
+    padding: 12px; 
+    font-size: 1em; 
   }
 
   .nav-button {
-    padding: 8px 16px; /* 네비게이션 버튼 패딩 줄이기 */
+    padding: 8px 16px; 
   }
 
   .info-button {
-    width: 30px; /* 아이콘 크기 줄이기 */
+    width: 30px;
     height: 30px;
-    font-size: 20px; /* 폰트 크기 줄이기 */
-    top: 15px; /* 위치 조정 */
+    font-size: 20px; 
+    top: 15px; 
     left: 15px;
   }
 
   .home-button {
-    font-size: 14px; /* 홈 버튼 폰트 크기 줄이기 */
-    top: 15px; /* 위치 조정 */
+    font-size: 14px; 
+    top: 15px; 
     right: 15px;
   }
 }
 
 @media (max-width: 480px) {
   .age-button {
-    padding: 10px; /* 버튼 패딩 추가 줄이기 */
-    font-size: 0.9em; /* 텍스트 크기 줄이기 */
+    padding: 10px; 
+    font-size: 0.9em; 
   }
 
   .nav-button {
-    padding: 6px 12px; /* 네비게이션 버튼 패딩 줄이기 */
+    padding: 6px 12px; 
   }
 
   .info-button {
-    width: 25px; /* 아이콘 크기 더 줄이기 */
+    width: 25px;
     height: 25px;
-    font-size: 18px; /* 폰트 크기 더 줄이기 */
+    font-size: 18px;
   }
 
   .home-button {
-    font-size: 12px; /* 홈 버튼 폰트 크기 줄이기 */
+    font-size: 12px;
   }
 }
