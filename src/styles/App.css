@@ -1,86 +1,35 @@
-/* 전체 컨테이너 스타일 */
-.app-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* 상단 정렬 */
-  height: 100vh;
-  width: 100vw;
-  background: #f5f5f5; /* 전체 배경색 */
-  overflow: hidden; /* 화면 넘침 방지 */
-}
-
-/* 비율을 유지하는 컨테이너 */
-.ratio-container {
+.home {
+  text-align: center;
+  background-color: #292929; /* 어두운 청색 배경 */
+  color: white;
+  height: 100vh; /* 화면 전체 높이 */
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 720px; /* 최대 너비 */
-  min-height: 100%; /* 최소 높이 100% */
-  background: #ffffff; /* 컨텐츠 배경색 */
-  border-radius: 10px; /* 둥근 모서리 */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 그림자 효과 */
-  box-sizing: border-box; /* 여백과 테두리 포함하여 크기 계산 */
-}
-
-/* 실제 컨텐츠를 넣는 부분 */
-.content {
-  flex: 1; /* 남은 공간을 차지하도록 설정 */
-  display: flex;
-  flex-direction: column;
-  padding: 10px; /* 내부 여백 */
-  box-sizing: border-box; /* 여백과 테두리 포함하여 크기 계산 */
-}
-
-/* 헤더 스타일 */
-.header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  position: relative; /* 느낌표 아이콘의 위치를 상대적으로 설정 */
-}
-
-/* 느낌표 아이콘 스타일 */
-.notification-icon {
-  width: 50px;
-  height: 50px;
-  background-color: #cfcfff; /* 원하는 색상 */
-  border-radius: 20%;
-  display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  font-size: 1.5rem;
-  position: absolute;
-  top: 10px; /* 상단 여백 */
-  left: 10px; /* 왼쪽 여백 */
-}
-
-/* 로고 컨테이너 스타일 */
-.logo-container {
-  margin: 40px 0;
 }
 
 .logo {
-  width: 180px;
-  height: 180px;
-  background-color: #cfcfff; /* 원하는 색상 */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 200px; /* 로고 크기 조절 */
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.start-button {
+  background-color: #007bff;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
 }

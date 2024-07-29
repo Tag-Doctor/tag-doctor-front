@@ -1,25 +1,17 @@
 import React from 'react';
-import './styles/App.css';
-import TagFunction from './components/TagFunction';
+import { Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import NextPage from './components/NextPage';
 
-const App = () => {
+function App() {
   return (
-    <div className="app-container">
-      <div className="ratio-container">
-        <div className="content">
-          <header className="header">
-            <div className="logo-container">
-              <div className="notification-icon">❕</div>
-            </div>
-            <div className="logo-container">
-              <div className="logo">Logo</div>
-            </div>
-          </header>
-          <TagFunction />
-        </div>
-      </div>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/next" element={<NextPage />} />
+      </Routes>
     </div>
   );
-};
+}
 
 export default App;
