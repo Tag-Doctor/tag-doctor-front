@@ -1,35 +1,45 @@
-.home {
-  text-align: center;
-  background-color: #292929; /* 어두운 청색 배경 */
-  color: white;
-  height: 100vh; /* 화면 전체 높이 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #132D46, #191E29);
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
 .logo {
-  width: 200px; /* 로고 크기 조절 */
-  height: 200px;
+  width: 40vw; /* Increased size based on viewport width */
+  max-width: 500px; /* Increased maximum size */
   margin-bottom: 20px;
 }
 
-.title {
-  font-size: 3rem;
-  font-weight: bold;
+.start-button {
+  background-color: #01C38D;
+  color: #ffffff; /* Changed text color to white */
+  font-size: 2vw; /* Adjusts size based on viewport width */
+  padding: 1.5vw 3vw; /* Adjusts padding based on viewport width */
+  border: none;
+  border-radius: 10px; /* Slightly more rounded corners */
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  /* Remove box-shadow from default state */
+  box-shadow: none; 
 }
 
-.start-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 12px;
+.start-button:hover {
+  background-color: #01C38D;
+  transform: scale(1.05);
+  /* Add box-shadow on hover state */
+  box-shadow: 0 0 30px #01C38D; /* Enhanced glowing effect */
 }

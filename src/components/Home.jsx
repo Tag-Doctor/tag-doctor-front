@@ -13,9 +13,8 @@ function Home() {
   return (
     <div className="home">
       <img src={logo} alt="Logo" className="logo" />
-      <h1 className="title">Tag Doctor</h1>
       <button className="start-button" onClick={goToPage1}>
-        Go to Page 1
+        Start
       </button>
     </div>
   );

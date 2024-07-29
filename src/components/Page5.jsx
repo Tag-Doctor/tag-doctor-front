@@ -7,6 +7,8 @@ function Page5() {
   return (
     <div>
       <h1>Page 5</h1>
+      <button >?</button>
+      <button  onClick={() => navigate('/')}>Home</button>
       <p>Welcome to Page 5!</p>
       <button onClick={() => navigate('/page4')}>Previous</button>
       <button onClick={() => navigate('/last')}>Next</button>
