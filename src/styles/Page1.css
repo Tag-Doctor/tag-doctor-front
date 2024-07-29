@@ -1,0 +1,207 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #132D46, #191E29);
+  height: 100vh;
+  color: #ffffff;
+  margin: 0; 
+  position: relative;
+}
+
+.age {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2vh;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.progress-step {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #555;
+  margin: 0 5px;
+  position: relative;
+}
+
+.progress-step.active {
+  background-color: #01C38D;
+}
+
+.progress-step.active:after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: rgba(1, 195, 141, 0.3);
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.age-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px; 
+  margin-bottom: 20px;
+}
+
+.age-button {
+  background-color: #696E79; 
+  color: #fff;
+  border: none; 
+  border-radius: 10px; 
+  padding: 15px; 
+  font-size: 1.2em; 
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; 
+  text-align: center;
+}
+
+.age-button.selected {
+  background-color: #01C38D; 
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: transparent;
+  color: #fff;
+  border: none; 
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; 
+}
+
+.nav-button.next-button {
+  background-color: #01C38D;
+  color: #fff;
+}
+
+.nav-button:hover {
+  background-color: #01A376;
+}
+
+.nav-button:active {
+  transform: scale(0.95); 
+}
+
+.info-button {
+  background-color: #696E79; 
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.info-button:hover {
+  background-color: #555; 
+}
+
+.info-button:active {
+  background-color: #444; 
+  transform: scale(0.95); 
+}
+
+.home-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: transform 0.2s; 
+}
+
+.home-button:hover {
+  transform: scale(1.1); 
+}
+
+.home-button:active {
+  transform: scale(0.95); 
+}
+
+.home-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+}
+
+
+@media (max-width: 768px) {
+  .age-button {
+    padding: 12px; 
+    font-size: 1em; 
+  }
+
+  .nav-button {
+    padding: 8px 16px; 
+  }
+
+  .info-button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px; 
+    top: 15px; 
+    left: 15px;
+  }
+
+  .home-button {
+    font-size: 14px; 
+    top: 15px; 
+    right: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .age-button {
+    padding: 10px; 
+    font-size: 0.9em; 
+  }
+
+  .nav-button {
+    padding: 6px 12px; 
+  }
+
+  .info-button {
+    width: 25px;
+    height: 25px;
+    font-size: 18px;
+  }
+
+  .home-button {
+    font-size: 12px;
+  }
+}
