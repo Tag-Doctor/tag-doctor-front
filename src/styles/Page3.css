@@ -21,31 +21,30 @@ body {
   margin-top: 30px;
   margin-bottom: 50px;
   text-align: center;
-  text-wrap-style: balance;
   font-size: 1.2em; 
 }
 
 .progress-step {
-  width: 30px;
-  height: 30px;
+  width: 40px; /* 피그마에서 제시된 크기 */
+  height: 40px; /* 피그마에서 제시된 크기 */
   border-radius: 50%;
-  background-color: #555;
-  margin: 0 20px;
+  background-color: #696E79; /* 기본 비활성 색상 */
+  margin: 0 35px;
   position: relative;
 }
 
 .progress-step.active {
-  background-color: #01C38D;
+  background-color: #01C38D; /* 활성화된 단계의 색상 */
 }
 
 .progress-step:not(:last-child)::after {
   content: '';
   position: absolute;
   top: 50%;
-  right: -50px; /* 원과 선 사이의 간격 조절 */
-  width: 60px; /* 선의 길이 */
-  height: 10px; /* 선의 두께 */
-  background-color: #01C38D; /* 기본 선 색상 */
+  right: -75px; /* 원과 선 사이의 간격 조절 */
+  width: 80px; /* 선의 길이 */
+  height: 12px; /* 선의 두께 */
+  background-color: #696E79; /* 기본 선 색상 */
   transform: translateY(-50%); /* 세로 중앙 정렬 */
 }
 
@@ -54,12 +53,33 @@ body {
 }
 
 .progress-step:not(.active)::after {
-  background-color: #555; /* 비활성 단계의 선 색상 */
+  background-color: #696E79; /* 비활성 단계의 선 색상 */
 }
 
 .progress-step:last-child::after {
-  background-color: #555; /* 마지막 단계의 선 색상 */
+  background-color: transparent; /* 마지막 단계의 선 색상 없음 */
 }
+
+.progress-step .step-number {
+  position: absolute;
+  width: 40px; /* 원의 너비와 동일하게 설정 */
+  height: 40px; /* 원의 높이와 동일하게 설정 */
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px; /* 숫자 크기 조정 */
+  line-height: 40px; /* 숫자를 세로 중앙 정렬 */
+  text-align: center;
+  color: #FFFFFF; /* 기본 텍스트 색상 */
+  top: 0; /* 상단 정렬 */
+  left: 0; /* 좌측 정렬 */
+  transform: translate(50%, 50%); /* 중앙 정렬 */
+}
+
+.progress-step:not(.active) .step-number {
+  color: #8C8C8C; /* 비활성 상태의 텍스트 색상 */
+}
+
 
 .part-buttons {
   display: grid;
@@ -108,11 +128,16 @@ body {
   background-color: transparent;
   color: #01C38D;
   border: none; 
-  border-radius: 20px; /* Increased border-radius */
+  border-radius: 15px; /* 피그마 디자인에 맞게 수정 */
   padding: 15px 25px; 
-  font-size: 1.2em; 
+  font-family: 'Inter', sans-serif; /* 폰트 추가 */
+  font-weight: 700; /* 굵게 설정 */
+  font-size: 20px; /* 피그마에서 제시된 크기 */
+  line-height: 24px; /* 피그마에서 제시된 줄 높이 */
+  text-align: center; /* 텍스트 중앙 정렬 */
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s; 
+  position: relative; /* 위치 조정 */
 }
 
 .nav-button.next-button {
@@ -138,6 +163,18 @@ body {
 .nav-button.skip {
   color: #adff2f; 
 }
+
+/* 추가적인 스타일 */
+.nav-button.previous {
+  width: 95px; /* 피그마에서 제시된 크기 */
+  height: 26px; /* 피그마에서 제시된 크기 */
+}
+
+.nav-button.skip {
+  width: 95px; /* 피그마에서 제시된 크기 */
+  height: 26px; /* 피그마에서 제시된 크기 */
+}
+
 
 .info-button {
   background-color: #696E79; 

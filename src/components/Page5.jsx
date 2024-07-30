@@ -38,7 +38,7 @@ function Page5() {
 
       <div className="navigation-buttons">
         <button className="nav-button" onClick={() => navigate('/page4')}>Previous</button>
-        <button className="nav-button next-button" onClick={handleNext}>Next</button>
+        <button className="nav-button next-button" onClick={handleNext}>Search</button>
       </div>
 
       <footer className="footer">
