@@ -1,6 +1,6 @@
 import React from 'react';
 
-function LastPage() {
+function Page6() {
   return (
     <div>
       <h1>Last Page</h1>
@@ -9,4 +9,4 @@ function LastPage() {
   );
 }
 
-export default LastPage;
+export default Page6;

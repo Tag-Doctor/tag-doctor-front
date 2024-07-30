@@ -33,21 +33,9 @@ body {
   background-color: #01C38D;
 }
 
-.progress-step.active:after {
-  content: '';
-  width: 40px;
-  height: 40px;
-  background: rgba(1, 195, 141, 0.3);
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  border-radius: 50%;
-  z-index: -1;
-}
-
 .part-buttons {
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px; 
   margin-bottom: 25px;
 }
@@ -186,7 +174,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  .part-button {
+  .age-button {
     padding: 16px; 
     font-size: 1.1em; 
   }
@@ -212,7 +200,7 @@ body {
 }
 
 @media (max-width: 480px) {
-  .part-button {
+  .age-button {
     padding: 14px; 
     font-size: 1em;
   }
