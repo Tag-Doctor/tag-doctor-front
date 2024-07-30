@@ -1,8 +1,12 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #132D46, #191E29);
+  background-color: #0e1e2b;
   height: 100vh;
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .age {
@@ -31,8 +35,8 @@ body {
 
 .progress-step.active:after {
   content: '';
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   background: rgba(1, 195, 141, 0.3);
   position: absolute;
   top: -10px;
