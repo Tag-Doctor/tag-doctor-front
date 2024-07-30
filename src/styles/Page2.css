@@ -17,12 +17,13 @@ body {
 .progress {
   display: flex;
   justify-content: center;
+  align-items: center; /* 세로 정렬 추가 */
   margin-bottom: 20px;
 }
 
 .progress-step {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   background-color: #555;
   margin: 0 5px;
@@ -31,6 +32,29 @@ body {
 
 .progress-step.active {
   background-color: #01C38D;
+}
+
+.progress-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -30px; /* 원과 선 사이의 간격 조절 */
+  width: 30px; /* 선의 길이 */
+  height: 2px; /* 선의 두께 */
+  background-color: #01C38D; /* 기본 선 색상 */
+  transform: translateY(-50%); /* 세로 중앙 정렬 */
+}
+
+.progress-step.active:not(:last-child)::after {
+  background-color: #01C38D; /* 활성 단계의 선 색상 */
+}
+
+.progress-step:not(.active)::after {
+  background-color: #555; /* 비활성 단계의 선 색상 */
+}
+
+.progress-step:last-child::after {
+  background-color: #555; /* 마지막 단계의 선 색상 */
 }
 
 .part-buttons {
