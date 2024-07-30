@@ -1,5 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import '../styles/Page4.css';
+import HomeLogo from '../imgs/Home_Logo.png';
 
 function Page4() {
   const navigate = useNavigate();

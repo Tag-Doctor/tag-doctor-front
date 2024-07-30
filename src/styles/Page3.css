@@ -4,3 +4,101 @@ body {
     height: 100vh;
     color: #ffffff;
   }
+
+  .nav-button.previous,
+.nav-button.skip {
+  color: #adff2f; 
+}
+
+.info-button {
+  background-color: #696E79; 
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.info-button:hover {
+  background-color: #555; 
+  transform: scale(1.1); 
+}
+
+.info-button:active {
+  background-color: #444; 
+  transform: scale(0.95); 
+}
+
+.home-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: absolute;
+  top: 80px; 
+  right: 200px; 
+  transition: transform 0.2s; 
+}
+
+.nav-button {
+    background-color: transparent;
+    color: #01C38D;
+    border: none; 
+    border-radius: 20px; /* Increased border-radius */
+    padding: 15px 25px; 
+    font-size: 1.2em; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; 
+  }
+  
+  .nav-button.next-button {
+    background-color: #01C38D;
+    color: #fff;
+  }
+  
+  .nav-button.next-button:hover {
+    background-color: #01C38D;
+    transform: scale(1.1); 
+  }
+  
+  .nav-button:hover {
+    background-color: #fff;
+    transform: scale(1.1); 
+  }
+  
+  .nav-button:active {
+    transform: scale(0.95); 
+  }
+  
+
+.home-button:hover {
+  transform: scale(1.1); 
+}
+
+.home-button:active {
+  transform: scale(0.95); 
+}
+
+.home-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
