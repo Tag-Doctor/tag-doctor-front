@@ -1,104 +1,43 @@
-/* Main container */
-.app-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #132D46, #191E29);
   height: 100vh;
-  width: 100vw;
-  background: linear-gradient(135deg, #132D46, #191E29);
-  overflow: hidden;
-  color: #FFFFFF;
-}
-
-/* Ratio container */
-.ratio-container {
   display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 720px;
-  min-height: 100%;
-  background: #132D46;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
-  position: relative;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Progress bar */
-.progress-bar {
+.home {
   display: flex;
-  justify-content: space-between;
-  padding: 10px;
-}
-
-.progress-step {
-  width: 20px;
-  height: 20px;
-  background: #696E79;
-  border-radius: 50%;
-  box-shadow: 0 0 10px rgba(1, 195, 141, 0.5);
-}
-
-.progress-step.active {
-  background: #01C38D;
-}
-
-/* Button styles */
-button {
-  background: #01C38D;
-  color: #FFFFFF;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(1, 195, 141, 0.5);
-}
-
-button:hover {
-  background: #01a77c;
-}
-
-/* Screen styles */
-.screen {
-  display: none;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 20px;
+  color: #ffffff;
 }
 
-.screen.active {
-  display: flex;
+.logo {
+  width: 40vw; 
+  max-width: 500px; 
+  margin-bottom: 20px;
 }
 
-/* Input styles */
-.search-input {
-  padding: 10px;
-  border: 2px solid #01C38D;
-  border-radius: 5px;
-  width: 80%;
+.start-button {
+  background-color: #01C38D;
+  color: #ffffff;
+  font-size: 2vw;
+  padding: 1.5vw 3vw; 
+  border: none;
+  border-radius: 10px; 
+  cursor: pointer;
+  text-transform: uppercase;
   margin-top: 20px;
-  background: #191E29;
-  color: #FFFFFF;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: none; 
 }
 
-.search-input::placeholder {
-  color: #696E79;
+.start-button:hover {
+  background-color: #01C38D;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #01C38D; 
 }
-
-/* Navigation buttons */
-.navigation-buttons {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding: 10px;
-}
-
-.navigation-buttons button {
-  flex: 1;
-  margin: 0 5px;
-}
-
