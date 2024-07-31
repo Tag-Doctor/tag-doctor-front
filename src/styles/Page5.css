@@ -8,14 +8,14 @@ body {
   align-items: center;
   justify-content: center;
 }
-
-.age {
+  
+.question {
   font-size: 1vw; /* vw 단위로 폰트 크기 설정 */
   font-weight: bold;
   text-align: center;
   margin-bottom: 1vh; /* 질문과 진행 상태 바 사이의 간격 조절 */
 }
-
+  
 .progress {
   display: flex;
   justify-content: center;
@@ -81,41 +81,38 @@ body {
   color: #8C8C8C; /* 비활성 상태의 텍스트 색상 */
 }
 
-.age-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px; 
-  margin-bottom: 25px;
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
-.age-button {
-  background-color: #696E79; 
-  color: #fff;
-  border: none; 
-  border-radius: 20px; /* Increased border-radius */
-  padding-left: 55px;
-  padding-right: 55px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  font-size: 1.4em; 
-  
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
+.search-textarea {
+  width: 500px;
+  height: 249px;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  font-size: 1.2em;
+  background-color: #696E79;
+  color: #ffffff;
+  resize: none;
+}
+
+.search-textarea::placeholder {
+  color: #bbb;
+  font-size: 1.2em; 
+  line-height: 230px; /* 숫자를 세로 중앙 정렬 */
   text-align: center;
 }
 
-.age-button.selected {
-  background-color: #01C38D; 
-}
-
-.age-button:hover {
-  transform: scale(1.05);
-  background-color: #01C38D;
-  box-shadow: 0 0 10px rgba(1, 195, 141, 0.6);
-}
-
-.age-button:active {
-  transform: scale(0.95);
+.clear-button {
+  background-color: transparent;
+  height: 76px;
+  border: none;
+  cursor: default; /* Default cursor to indicate non-interactive */
+  pointer-events: none; /* Disable pointer events */
 }
 
 .navigation-buttons {
@@ -124,7 +121,7 @@ body {
   margin-top: 60px; 
   gap: 15px; 
 }
-
+  
 .nav-button {
   background-color: transparent;
   color: #01C38D;
@@ -140,7 +137,7 @@ body {
   transition: background-color 0.3s, transform 0.2s; 
   position: relative; /* 위치 조정 */
 }
-
+  
 .nav-button.next-button {
   background-color: #01C38D;
   color: #fff;
@@ -155,27 +152,27 @@ body {
 .nav-button:hover {
   background-color: #fff;
 }
-
+  
 .nav-button:active {
   transform: scale(0.95); 
 }
-
+  
 .nav-button.previous,
 .nav-button.skip {
   color: #adff2f; 
 }
-
+  
 /* 추가적인 스타일 */
 .nav-button.previous {
   width: 95px; /* 피그마에서 제시된 크기 */
   height: 26px; /* 피그마에서 제시된 크기 */
 }
-
+  
 .nav-button.skip {
   width: 95px; /* 피그마에서 제시된 크기 */
   height: 26px; /* 피그마에서 제시된 크기 */
 }
-
+  
 .info-button {
   background-color: #696E79; 
   color: #fff;
@@ -193,95 +190,96 @@ body {
   left: 200px;
   transition: background-color 0.3s, transform 0.2s;
 }
-
-.info-button:hover {
-  background-color: #555; 
-  transform: scale(1.1); 
-}
-
-.info-button:active {
-  background-color: #444; 
-  transform: scale(0.95); 
-}
-
-.home-button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  position: absolute;
-  top: 80px; 
-  right: 200px; 
-  transition: transform 0.2s; 
-}
-
-.home-button:hover {
-  transform: scale(1.1); 
-}
-
-.home-button:active {
-  transform: scale(0.95); 
-}
-
-.home-logo {
-  width: 15px;
-  height: 15px;
-  margin-right: 8px;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-@media (max-width: 768px) {
-  .age-button {
-    padding: 16px; 
-    font-size: 1.1em; 
+  
+  .info-button:hover {
+    background-color: #555; 
+    transform: scale(1.1); 
   }
-
-  .nav-button {
-    padding: 12px 20px; 
-    font-size: 1.1em; 
+  
+  .info-button:active {
+    background-color: #444; 
+    transform: scale(0.95); 
   }
-
-  .info-button {
-    width: 30px;
-    height: 30px;
-    font-size: 20px; 
-    top: 10px; 
-    left: 10px; 
-  }
-
+  
   .home-button {
-    font-size: 14px; 
-    top: 10px; 
-    right: 10px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 80px; 
+    right: 200px; 
+    transition: transform 0.2s; 
   }
-}
-
-@media (max-width: 480px) {
-  .age-button {
-    padding: 14px; 
-    font-size: 1em;
+  
+  .home-button:hover {
+    transform: scale(1.1); 
   }
-
-  .nav-button {
-    padding: 10px 18px; 
-    font-size: 1em; 
+  
+  .home-button:active {
+    transform: scale(0.95); 
   }
-
-  .info-button {
-    width: 25px;
-    height: 25px;
-    font-size: 18px;
+  
+  .home-logo {
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
   }
-
-  .home-button {
-    font-size: 12px;
+  
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
   }
-}
+  
+  @media (max-width: 768px) {
+    .age-button {
+      padding: 16px; 
+      font-size: 1.1em; 
+    }
+  
+    .nav-button {
+      padding: 12px 20px; 
+      font-size: 1.1em; 
+    }
+  
+    .info-button {
+      width: 30px;
+      height: 30px;
+      font-size: 20px; 
+      top: 10px; 
+      left: 10px; 
+    }
+  
+    .home-button {
+      font-size: 14px; 
+      top: 10px; 
+      right: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .age-button {
+      padding: 14px; 
+      font-size: 1em;
+    }
+  
+    .nav-button {
+      padding: 10px 18px; 
+      font-size: 1em; 
+    }
+  
+    .info-button {
+      width: 25px;
+      height: 25px;
+      font-size: 18px;
+    }
+  
+    .home-button {
+      font-size: 12px;
+    }
+  }
+  
