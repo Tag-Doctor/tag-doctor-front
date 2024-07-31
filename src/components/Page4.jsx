@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Page3.css';
+import '../styles/Page4.css';
 import HomeLogo from '../imgs/Home_Logo.png';
 
 function Page4() {
@@ -50,7 +50,7 @@ function Page4() {
       </div>
 
       <div className="navigation-buttons">
-        <button className="nav-button" onClick={() => navigate('/page3')}>Previous</button>
+        <button className="nav-button" onClick={() => navigate('/page3')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
         <button className="nav-button" onClick={() => navigate('/page5')}>Skip</button>
       </div>

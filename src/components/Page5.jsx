@@ -25,19 +25,19 @@ function Page5() {
       </div>
         
       <div className="progress">
-        <div className="progress-step active">1</div>
+        <div className="progress-step active">1</div> 
         <div className="progress-step active">2</div>
         <div className="progress-step active">3</div>
         <div className="progress-step active">4</div>
         <div className="progress-step active">5</div>
       </div>
 
-      <div className="input-box">
-        <p>Please write it down in detail.</p>
-      </div>
+      <div class="search-box">
+        <textarea class="search-textarea" placeholder="Please write it down in detail."></textarea>
+    </div>
 
       <div className="navigation-buttons">
-        <button className="nav-button" onClick={() => navigate('/page4')}>Previous</button>
+        <button className="nav-button" onClick={() => navigate('/page4')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Search</button>
       </div>
 

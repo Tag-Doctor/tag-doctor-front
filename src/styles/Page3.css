@@ -10,8 +10,10 @@ body {
 }
 
 .question {
-  display: flex;
-  justify-content: center;
+  font-size: 1vw; /* vw 단위로 폰트 크기 설정 */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1vh; /* 질문과 진행 상태 바 사이의 간격 조절 */
 }
 
 .progress {
@@ -31,6 +33,9 @@ body {
   background-color: #696E79; /* 기본 비활성 색상 */
   margin: 0 35px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* 숫자 중앙 정렬을 위한 flexbox 설정 */
 }
 
 .progress-step.active {
@@ -61,25 +66,18 @@ body {
 }
 
 .progress-step .step-number {
-  position: absolute;
-  width: 40px; /* 원의 너비와 동일하게 설정 */
-  height: 40px; /* 원의 높이와 동일하게 설정 */
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: 800;
+  font-weight: bold;
   font-size: 16px; /* 숫자 크기 조정 */
   line-height: 40px; /* 숫자를 세로 중앙 정렬 */
   text-align: center;
   color: #FFFFFF; /* 기본 텍스트 색상 */
-  top: 0; /* 상단 정렬 */
-  left: 0; /* 좌측 정렬 */
-  transform: translate(50%, 50%); /* 중앙 정렬 */
 }
 
 .progress-step:not(.active) .step-number {
   color: #8C8C8C; /* 비활성 상태의 텍스트 색상 */
 }
-
 
 .part-buttons {
   display: grid;
@@ -227,8 +225,8 @@ body {
 }
 
 .home-logo {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   margin-right: 8px;
 }
 

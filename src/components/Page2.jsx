@@ -13,8 +13,16 @@ function Page2() {
     }
   };
 
+  const clearParts1 = [
+    '', '',
+  ];
+
   const bodyParts = [
     'upper half of the body', 'lower half of the body'
+  ];
+
+  const clearParts = [
+    '', '',
   ];
 
   return (
@@ -37,6 +45,15 @@ function Page2() {
       </div>
 
       <div className="part-buttons">
+      {clearParts.map((part, index) => (
+          <button
+            key={`clear-${index}`}
+            className="part-button clear-button"
+            onClick={() => {}}
+          >
+            {part}
+          </button>
+        ))}
         {bodyParts.map((part, index) => (
           <button
             key={index}
@@ -46,10 +63,19 @@ function Page2() {
             {part}
           </button>
         ))}
+        {clearParts.map((part, index) => (
+          <button
+            key={`clear-${index}`}
+            className="part-button clear-button"
+            onClick={() => {}}
+          >
+            {part}
+          </button>
+        ))}
       </div>
 
       <div className="navigation-buttons">
-        <button className="nav-button" onClick={() => navigate('/page1')}>Previous</button>
+        <button className="nav-button" onClick={() => navigate('/page1')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
         <button className="nav-button" onClick={() => navigate('/page3')}>Skip</button>
       </div>
