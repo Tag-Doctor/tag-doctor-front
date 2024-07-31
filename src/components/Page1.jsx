@@ -14,8 +14,8 @@ function Page1() {
   };
 
   const ageGroups = [
-    'Less than 10', '10-19', '20-29', '30-39',
-    '40-49', '50-59', '60-69', 'over 70'
+    'Less than 20', '20 - 29', '30 - 39',
+    '40 - 49', '50 - 59', 'over 60'
   ];
 
   return (
@@ -51,9 +51,9 @@ function Page1() {
 
 
       <div className="navigation-buttons">
-        <button className="nav-button" onClick={() => navigate('/')}>Previous</button>
+        <button className="nav-button" onClick={() => navigate('/')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
-        <button className="nav-button" onClick={() => navigate('/page2')}>Skip</button>
+        <button className="nav-button" onClick={() => navigate('/page2')}>  Skip  </button>
       </div>
 
 

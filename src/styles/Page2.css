@@ -9,7 +9,7 @@ body {
   justify-content: center;
 }
 
-.age {
+.question {
   font-size: 1vw; /* vw 단위로 폰트 크기 설정 */
   font-weight: bold;
   text-align: center;
@@ -81,14 +81,14 @@ body {
   color: #8C8C8C; /* 비활성 상태의 텍스트 색상 */
 }
 
-.age-buttons {
+.part-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px; 
+  grid-template-rows: repeat(auto-fit, minmax(0, 1fr)); /* Define rows instead of columns */
+  gap: 30px;
   margin-bottom: 25px;
 }
 
-.age-button {
+.part-button {
   background-color: #696E79; 
   color: #fff;
   border: none; 
@@ -98,29 +98,37 @@ body {
   padding-top: 25px;
   padding-bottom: 25px;
   font-size: 1.4em; 
-  
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
   text-align: center;
 }
 
-.age-button.selected {
+.part-button.selected {
   background-color: #01C38D; 
 }
 
-.age-button:hover {
+.part-button:hover {
   transform: scale(1.05);
   background-color: #01C38D;
   box-shadow: 0 0 10px rgba(1, 195, 141, 0.6);
 }
 
-.age-button:active {
+.part-button:active {
   transform: scale(0.95);
+}
+
+.clear-button {
+  background-color: transparent;
+  height: 76px;
+  border: none;
+  cursor: default; /* Default cursor to indicate non-interactive */
+  pointer-events: none; /* Disable pointer events */
 }
 
 .navigation-buttons {
   display: flex;
   justify-content: center;
+  align-items: center; /* Ensure vertical alignment */
   margin-top: 60px; 
   gap: 15px; 
 }
