@@ -19,7 +19,7 @@ body {
 .logo {
   width: 40vw; 
   max-width: 500px; 
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .start-button {
@@ -31,7 +31,7 @@ body {
   border-radius: 10px; 
   cursor: pointer;
   text-transform: uppercase;
-  margin-top: 20px;
+  margin-top: 10px;
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: none; 
 }

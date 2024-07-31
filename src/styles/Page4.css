@@ -39,7 +39,8 @@ body {
 }
 
 .progress-step.active {
-  background-color: #01C38D; /* 활성화된 단계의 색상 */
+  background-color: #01C38D;
+  box-shadow: 0 0 10px rgba(1, 195, 141, 0.6);
 }
 
 .progress-step:not(:last-child)::after {
@@ -54,7 +55,8 @@ body {
 }
 
 .progress-step.active:not(:last-child)::after {
-  background-color: #01C38D; /* 활성 단계의 선 색상 */
+  background-color: #01C38D;
+  box-shadow: 0 0 10px rgba(1, 195, 141, 0.6);
 }
 
 .progress-step:not(.active)::after {
@@ -78,8 +80,6 @@ body {
 .progress-step:not(.active) .step-number {
   color: #8C8C8C; /* 비활성 상태의 텍스트 색상 */
 }
-
-
 
 .part-buttons {
   display: grid;
@@ -154,13 +154,13 @@ body {
 }
 
 .nav-button.next-button:hover {
+  transform: scale(1.05);
   background-color: #01C38D;
-  transform: scale(1.1); 
+  box-shadow: 0 0 10px rgba(1, 195, 141, 0.6); 
 }
 
 .nav-button:hover {
   background-color: #fff;
-  transform: scale(1.1); 
 }
 
 .nav-button:active {
