@@ -45,7 +45,7 @@ function Page2() {
       </div>
 
       <div className="part-buttons">
-      {clearParts.map((part, index) => (
+        {clearParts.map((part, index) => (
           <button
             key={`clear-${index}`}
             className="part-button clear-button"
@@ -77,7 +77,7 @@ function Page2() {
       <div className="navigation-buttons">
         <button className="nav-button" onClick={() => navigate('/page1')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
-        <button className="nav-button" onClick={() => navigate('/page3')}>Skip</button>
+        <button className="nav-button" onClick={() => navigate('/page5')}>Skip</button> {/* 여기서 '/page5'로 변경 */}
       </div>
 
       <footer className="footer">
