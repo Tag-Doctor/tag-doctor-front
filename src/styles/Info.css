@@ -9,6 +9,14 @@ body {
     justify-content: center;
   }
 
+  .logo_2 {
+    width: 20vw; 
+    max-width: 300px; 
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
   .home-button {
     background: none;
     border: none;
