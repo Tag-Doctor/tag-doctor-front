@@ -2,6 +2,7 @@ import React, { useState } from 'react'; // useState 추가
 import { useNavigate } from 'react-router-dom';
 import '../styles/Page5.css';
 import HomeLogo from '../imgs/Home_Logo.png';
+import logo from '../imgs/Logo.png';
 
 function Page5() {
   const navigate = useNavigate();
@@ -15,7 +16,7 @@ function Page5() {
 
   return (
     <div className="container">
-      <button className="info-button">?</button>
+      <img src={logo} alt="Logo" className="logo" />
       <button className="home-button" onClick={() => navigate('/')}>
         <img src={HomeLogo} alt="Home" className="home-logo" />
         Home

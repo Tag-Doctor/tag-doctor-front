@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Page2.css';
 import HomeLogo from '../imgs/Home_Logo.png';
+import logo from '../imgs/Logo.png';
 
 function Page2() {
   const navigate = useNavigate();
@@ -27,7 +28,7 @@ function Page2() {
 
   return (
     <div className="container">
-      <button className="info-button">?</button>
+      <img src={logo} alt="Logo" className="logo" />
       <button className="home-button" onClick={() => navigate('/')}>
         <img src={HomeLogo} alt="Home" className="home-logo" />
         Home
@@ -45,7 +46,7 @@ function Page2() {
       </div>
 
       <div className="part-buttons">
-      {clearParts.map((part, index) => (
+        {clearParts.map((part, index) => (
           <button
             key={`clear-${index}`}
             className="part-button clear-button"
@@ -77,7 +78,7 @@ function Page2() {
       <div className="navigation-buttons">
         <button className="nav-button" onClick={() => navigate('/page1')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
-        <button className="nav-button" onClick={() => navigate('/page3')}>Skip</button>
+        
       </div>
 
       <footer className="footer">
