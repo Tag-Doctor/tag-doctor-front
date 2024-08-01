@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/Page4.css';
 import HomeLogo from '../imgs/Home_Logo.png';
+import logo from '../imgs/Logo.png';
 
 function Page4() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function Page4() {
 
   return (
     <div className="container">
-      <button className="info-button">?</button>
+      <img src={logo} alt="Logo" className="logo" />
       <button className="home-button" onClick={() => navigate('/')}>
         <img src={HomeLogo} alt="Home" className="home-logo" />
         Home

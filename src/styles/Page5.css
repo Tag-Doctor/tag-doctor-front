@@ -1,3 +1,12 @@
+@keyframes fillColor {
+  from {
+    background-position: 0% 0%;
+  }
+  to {
+    background-position: 100% 0%;
+  }
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #0e1e2b;
@@ -55,7 +64,9 @@ body {
 }
 
 .progress-step.active:not(:last-child)::after {
-  background-color: #01C38D;
+  background: linear-gradient(to right, #01C38D 0%, #01C38D 100%);
+  background-size: 200% 100%;
+  animation: fillColor 1s forwards;
   box-shadow: 0 0 10px rgba(1, 195, 141, 0.6);
 }
 
@@ -70,7 +81,7 @@ body {
 .progress-step .step-number {
   font-family: 'Inter', sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 900;
   font-size: 16px; /* 숫자 크기 조정 */
   line-height: 40px; /* 숫자를 세로 중앙 정렬 */
   text-align: center;
@@ -173,33 +184,16 @@ body {
   height: 26px; /* 피그마에서 제시된 크기 */
 }
   
-.info-button {
-  background-color: #696E79; 
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  font-size: 24px;
+.logo {
+  width: 70px;
+  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   position: absolute;
   top: 80px;
   left: 200px;
-  transition: background-color 0.3s, transform 0.2s;
 }
-  
-  .info-button:hover {
-    background-color: #555; 
-    transform: scale(1.1); 
-  }
-  
-  .info-button:active {
-    background-color: #444; 
-    transform: scale(0.95); 
-  }
   
   .home-button {
     background: none;

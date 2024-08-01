@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../imgs/Logo.png';
+import logo from '../imgs/Logo_1.png';
 import '../styles/App.css';
 
 function Home() {
@@ -12,7 +12,8 @@ function Home() {
 
   return (
     <div className="home">
-      <img src={logo} alt="Logo" className="logo" />
+      <button className="info-button">?</button>
+      <img src={logo} alt="Logo" className="logo_1" />
       <button className="start-button" onClick={goToPage1}>
         Start
       </button>

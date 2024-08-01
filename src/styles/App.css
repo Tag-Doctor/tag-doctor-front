@@ -16,7 +16,7 @@ body {
   color: #ffffff;
 }
 
-.logo {
+.logo_1 {
   width: 40vw; 
   max-width: 500px; 
   margin-bottom: 10px;
@@ -40,4 +40,32 @@ body {
   background-color: #01C38D;
   transform: scale(1.05);
   box-shadow: 0 0 30px #01C38D; 
+}
+
+.info-button {
+  background-color: #696E79; 
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  top: 80px;
+  left: 200px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.info-button:hover {
+  background-color: #555; 
+  transform: scale(1.1); 
+}
+
+.info-button:active {
+  background-color: #444; 
+  transform: scale(0.95); 
 }

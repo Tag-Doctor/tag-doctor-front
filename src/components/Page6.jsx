@@ -1,4 +1,5 @@
 import React from 'react';
+import logo from '../imgs/Logo.png';
 
 function Page6() {
   return (
