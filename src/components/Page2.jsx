@@ -78,7 +78,7 @@ function Page2() {
       <div className="navigation-buttons">
         <button className="nav-button" onClick={() => navigate('/page1')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
-        <button className="nav-button" onClick={() => navigate('/page3')}>Skip</button>
+        
       </div>
 
       <footer className="footer">

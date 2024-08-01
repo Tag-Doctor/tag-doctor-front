@@ -53,7 +53,7 @@ function Page4() {
       <div className="navigation-buttons">
         <button className="nav-button" onClick={() => navigate('/page3')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
-        <button className="nav-button" onClick={() => navigate('/page5')}>Skip</button>
+        
       </div>
 
       <footer className="footer">
