@@ -46,7 +46,7 @@ function Page2() {
       </div>
 
       <div className="part-buttons">
-      {clearParts.map((part, index) => (
+        {clearParts.map((part, index) => (
           <button
             key={`clear-${index}`}
             className="part-button clear-button"
