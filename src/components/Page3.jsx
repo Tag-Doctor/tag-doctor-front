@@ -1,23 +1,26 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Page3.css';
 import HomeLogo from '../imgs/Home_Logo.png';
 import logo from '../imgs/Logo.png';
 
 function Page3() {
   const navigate = useNavigate();
-  const [selectedPart, setSelectedPart] = useState('');
+  const location = useLocation();
+  const { selectedPart } = location.state || {};
+  const [selectedSubPart, setSelectedSubPart] = useState('');
 
   const handleNext = () => {
-    if (selectedPart) {
-      navigate('/page4');
+    if (selectedSubPart) {
+      navigate('/page4', {
+        state: { ...location.state, selectedSubPart }
+      });
     }
   };
 
-  const bodyParts = [
-    'Face', 'Abdomen', 'Arm', 'Chest',
-    'Head', 'Back'
-  ];
+  const upperBodyParts = ['Face', 'Abdomen', 'Arm', 'Chest', 'Head', 'Back'];
+  const lowerBodyParts = ['Thigh', 'Foot', 'Buttocks', 'Knee', 'Genital', 'Shin'];
+  const bodyParts = selectedPart === 'Upper Body' ? upperBodyParts : lowerBodyParts;
 
   return (
     <div className="container">
@@ -27,7 +30,7 @@ function Page3() {
         Home
       </button>
       <div className='question'>
-        <h1>Which part? (2)</h1>
+        <h1>Which specific part?</h1>
       </div>
 
       <div className="progress">
@@ -38,12 +41,12 @@ function Page3() {
         <div className="progress-step">5</div>
       </div>
 
-      <div className="part-buttons">
+      <div className="sub-part-buttons">
         {bodyParts.map((part, index) => (
           <button
             key={index}
-            className={`part-button ${selectedPart === part ? 'selected' : ''}`}
-            onClick={() => setSelectedPart(part)}
+            className={`sub-part-button ${selectedSubPart === part ? 'selected' : ''}`}
+            onClick={() => setSelectedSubPart(part)}
           >
             {part}
           </button>
@@ -53,7 +56,6 @@ function Page3() {
       <div className="navigation-buttons">
         <button className="nav-button" onClick={() => navigate('/page2')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
-        
       </div>
 
       <footer className="footer">
