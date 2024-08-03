@@ -25,8 +25,7 @@ function Page4() {
   };
 
   const details = {
-    'Face': ['Forehead', 'Cheeks', 'Jaw', 'Lips', 'Nose', 'Eyes'], 
-    /*'Eye', 'Nose', 'Mouth', 'Ear', 'Chin', 'Tooth'*/ 
+    'Face': ['Forehead', 'Cheeks', 'Jaw', 'Lips', 'Nose', 'Eyes'],
     'Abdomen': ['Upper Abdomen', 'Lower Abdomen', 'Right Side', 'Left Side', 'Navel', 'Lower Back'],
     'Arm': ['Upper Arm', 'Forearm', 'Elbow', 'Wrist', 'Hand', 'Shoulder'],
     'Chest': ['Upper Chest', 'Lower Chest', 'Right Side', 'Left Side', 'Breastbone', 'Ribs'],
