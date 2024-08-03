@@ -1,30 +1,26 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Page2.css';
 import HomeLogo from '../imgs/Home_Logo.png';
 import logo from '../imgs/Logo.png';
 
 function Page2() {
   const navigate = useNavigate();
+  const location = useLocation();
   const [selectedPart, setSelectedPart] = useState('');
 
   const handleNext = () => {
     if (selectedPart) {
-      navigate('/page3');
+      navigate('/page3', {
+        state: { ...location.state, selectedPart }
+      });
     }
   };
 
-  const clearParts1 = [
-    '', '',
-  ];
-
-  const bodyParts = [
-    'upper half of the body', 'lower half of the body'
-  ];
-
-  const clearParts = [
-    '', '',
-  ];
+  const bodyParts = {
+    'Upper Body': ['Face', 'Abdomen', 'Arm', 'Chest', 'Head', 'Back'],
+    'Lower Body': ['Thigh', 'Foot', 'Buttocks', 'Knee', 'Genital', 'Shin']
+  };
 
   return (
     <div className="container">
@@ -36,7 +32,6 @@ function Page2() {
       <div className='question'>
         <h1>Which part? (1)</h1>
       </div>
-
       <div className="progress">
         <div className="progress-step active">1</div>
         <div className="progress-step active">2</div>
@@ -44,47 +39,26 @@ function Page2() {
         <div className="progress-step">4</div>
         <div className="progress-step">5</div>
       </div>
-
       <div className="part-buttons">
-        {clearParts.map((part, index) => (
-          <button
-            key={`clear-${index}`}
-            className="part-button clear-button"
-            onClick={() => {}}
-          >
-            {part}
-          </button>
-        ))}
-        {bodyParts.map((part, index) => (
+        {Object.keys(bodyParts).map((category, index) => (
           <button
             key={index}
-            className={`part-button ${selectedPart === part ? 'selected' : ''}`}
-            onClick={() => setSelectedPart(part)}
+            className={`part-button ${selectedPart === category ? 'selected' : ''}`}
+            onClick={() => setSelectedPart(category)}
           >
-            {part}
-          </button>
-        ))}
-        {clearParts.map((part, index) => (
-          <button
-            key={`clear-${index}`}
-            className="part-button clear-button"
-            onClick={() => {}}
-          >
-            {part}
+            {category}
           </button>
         ))}
       </div>
 
       <div className="navigation-buttons">
-        <button className="nav-button" onClick={() => navigate('/page1')}>Prev</button>
+        <button className="nav-button" onClick={() => navigate('/Page1')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
-        
       </div>
 
       <footer className="footer">
         <h5>Tag-Doctor</h5>
       </footer>
-      
     </div>
   );
 }

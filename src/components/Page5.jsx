@@ -1,16 +1,27 @@
-import React, { useState } from 'react'; // useState 추가
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Page5.css';
 import HomeLogo from '../imgs/Home_Logo.png';
 import logo from '../imgs/Logo.png';
 
 function Page5() {
   const navigate = useNavigate();
-  const [selectedPart, setSelectedPart] = useState('');
+  const location = useLocation();
+  const { selectedAge, selectedPart, selectedSubPart, selectedDetail } = location.state || {};
+
+  const [additionalInfo, setAdditionalInfo] = useState('');
 
   const handleNext = () => {
-    if (selectedPart) {
-      navigate('/page6');
+    if (additionalInfo) {
+      navigate('/page6', {
+        state: {
+          selectedAge,
+          selectedPart,
+          selectedSubPart,
+          selectedDetail,
+          additionalInfo,
+        },
+      });
     }
   };
 
@@ -33,12 +44,17 @@ function Page5() {
         <div className="progress-step active">5</div>
       </div>
 
-      <div class="search-box">
-        <textarea class="search-textarea" placeholder="Please write it down in detail."></textarea>
-    </div>
+      <div className="search-box">
+        <textarea
+          className="search-textarea"
+          placeholder="Please write it down in detail."
+          value={additionalInfo}
+          onChange={(e) => setAdditionalInfo(e.target.value)}
+        ></textarea>
+      </div>
 
       <div className="navigation-buttons">
-        <button className="nav-button" onClick={() => navigate('/page4')}>Prev</button>
+      <button className="nav-button" onClick={() => navigate('/page4')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Search</button>
       </div>
 
