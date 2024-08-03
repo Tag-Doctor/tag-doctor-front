@@ -7,8 +7,8 @@ import '../styles/Page6.css';
 function Page6() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { selectedAge, selectedPart, selectedSubPart, selectedDetail } = location.state || {};
-
+  const { selectedAge, selectedPart, selectedSubPart, selectedDetail, additionalInfo } = location.state || {};
+  console.log(additionalInfo); // 확인용
   return (
     <div className="page6-container">
       <div className="header">
@@ -25,6 +25,7 @@ function Page6() {
           <p><strong>Selected Part :  </strong> {selectedPart}</p>
           <p><strong>Selected Sub-Part :  </strong> {selectedSubPart}</p>
           <p><strong>Selected Detail :  </strong> {selectedDetail}</p>
+          
         </div>
 
       </div>
