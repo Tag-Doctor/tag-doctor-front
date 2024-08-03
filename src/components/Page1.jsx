@@ -10,7 +10,7 @@ function Page1() {
 
   const handleNext = () => {
     if (selectedAge) {
-      navigate('/page2');
+      navigate('/page2', { state: { selectedAge } });
     }
   };
 
@@ -50,18 +50,15 @@ function Page1() {
         ))}
       </div>
 
-
       <div className="navigation-buttons">
         <button className="nav-button" onClick={() => navigate('/')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
         <button className="nav-button" onClick={() => navigate('/page2')}>  Skip  </button>
       </div>
 
-
       <footer className="footer">
         <h5>Tag-Doctor</h5>
       </footer>
-      
     </div>
   );
 }

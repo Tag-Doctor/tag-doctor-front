@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from '../imgs/Logo_1.png';
 import '../styles/App.css';
-import Info from './Info';
 
 function Home() {
   const navigate = useNavigate();
