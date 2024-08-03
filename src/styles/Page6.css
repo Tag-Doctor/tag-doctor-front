@@ -19,14 +19,14 @@ body {
   .results-box {
     font-weight: 400;
     color: #01C38D;
-    width: 200px;
+    width: 250px;
     height: 300px;
     display: flex;
     flex-direction: column; /* Items are laid out in a column */
     justify-content: center;
     position: absolute;
-    top: 150px;
-    left: 120px;
+    top: 200px;
+    left: 100px;
 }
 
   /*logo_3.png로 꼭!*/
