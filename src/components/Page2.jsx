@@ -30,7 +30,7 @@ function Page2() {
         Home
       </button>
       <div className='question'>
-        <h1>Which part? (1)</h1>
+        <h1>Select Part</h1>
       </div>
       <div className="progress">
         <div className="progress-step active">1</div>

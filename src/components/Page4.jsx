@@ -50,7 +50,7 @@ function Page4() {
         Home
       </button>
       <div className='question'>
-        <h1>Which detail? (2)</h1>
+        <h1>Select Detail</h1>
       </div>
 
       <div className="progress">

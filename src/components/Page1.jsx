@@ -27,7 +27,7 @@ function Page1() {
         Home
       </button>
       <div className='age'>
-        <h1>Your age?</h1>
+        <h1>Your age</h1>
       </div>
 
       <div className="progress">
