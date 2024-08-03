@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import '../styles/Page4.css';
 import HomeLogo from '../imgs/Home_Logo.png';
@@ -7,13 +7,19 @@ import logo from '../imgs/Logo.png';
 function Page4() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { selectedSubPart } = location.state || {};
+  const { selectedSubPart, ...restState } = location.state || {};
   const [selectedDetail, setSelectedDetail] = useState('');
+
+  useEffect(() => {
+    if (!selectedSubPart) {
+      navigate('/page3');
+    }
+  }, [selectedSubPart, navigate]);
 
   const handleNext = () => {
     if (selectedDetail) {
       navigate('/page5', {
-        state: { ...location.state, selectedDetail }
+        state: { ...restState, selectedSubPart, selectedDetail }
       });
     }
   };
@@ -32,7 +38,6 @@ function Page4() {
     'Genital': ['External Genitalia', 'Perineum', 'Penis/Vagina', 'Scrotum/Labia', 'Urethra', 'Prostate/Uterus'],
     'Shin': ['Front of Shin', 'Inner Shin', 'Outer Shin', 'Upper Shin', 'Lower Shin', 'Shinbone']
   };
-
 
   const detailParts = details[selectedSubPart] || [];
 
@@ -68,7 +73,7 @@ function Page4() {
       </div>
 
       <div className="navigation-buttons">
-        <button className="nav-button" onClick={() => navigate('/page3')}>Prev</button>
+        <button className="nav-button" onClick={() => navigate('/page3', { state: restState })}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
       </div>
 

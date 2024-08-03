@@ -34,7 +34,7 @@ function Page2() {
       </div>
       <div className="progress">
         <div className="progress-step active">1</div>
-        <div className="progress-step">2</div>
+        <div className="progress-step active">2</div>
         <div className="progress-step">3</div>
         <div className="progress-step">4</div>
         <div className="progress-step">5</div>
@@ -52,7 +52,7 @@ function Page2() {
       </div>
 
       <div className="navigation-buttons">
-        <button className="nav-button" onClick={() => navigate('/')}>Prev</button>
+        <button className="nav-button" onClick={() => navigate('/Page1')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Next</button>
       </div>
 
