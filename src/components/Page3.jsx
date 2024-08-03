@@ -30,7 +30,7 @@ function Page3() {
         Home
       </button>
       <div className='question'>
-        <h1>Which specific part?</h1>
+        <h1>Select Sub-Part</h1>
       </div>
 
       <div className="progress">

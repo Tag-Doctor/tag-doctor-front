@@ -118,14 +118,6 @@ body {
   text-align: center;
 }
 
-.clear-button {
-  background-color: transparent;
-  height: 76px;
-  border: none;
-  cursor: default; /* Default cursor to indicate non-interactive */
-  pointer-events: none; /* Disable pointer events */
-}
-
 .navigation-buttons {
   display: flex;
   justify-content: center;
