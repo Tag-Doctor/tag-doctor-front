@@ -29,6 +29,7 @@ body {
     left: 120px;
 }
 
+  /*logo_3.png로 꼭!*/
   .logo_3 {
     width: 70px;
     height: 70px;
@@ -40,6 +41,7 @@ body {
     left: 200px;
   }
 
+  /*결과창은 선택했을 경우에만 테두리가 하얘집니다.*/
   .result-box {
     display: flex;
     justify-content: center;
