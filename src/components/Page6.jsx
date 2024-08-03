@@ -33,7 +33,7 @@ function Page6() {
       <div className="result-box">
         <textarea
           className="result-textarea"
-        ></textarea>
+          disabled></textarea>
       </div>
 
       <div className="navigation-buttons">
