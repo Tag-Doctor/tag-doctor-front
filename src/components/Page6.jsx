@@ -7,7 +7,7 @@ import '../styles/Page6.css';
 function Page6() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { selectedAge, selectedPart, selectedSubPart, selectedDetail, additionalInfo } = location.state || {};
+  const { selectedAge, selectedPart, selectedSubPart, selectedDetail, additionalInfo } = location.state || {}; // << 추가
   console.log(additionalInfo); // 확인용
   return (
     <div className="page6-container">

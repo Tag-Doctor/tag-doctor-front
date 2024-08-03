@@ -24,12 +24,12 @@ function Page4() {
     }
   };
 
-  const details = {
-    'Face': ['Forehead', 'Cheeks', 'Jaw', 'Lips', 'Nose', 'Eyes'],
+    const details = {
+    'Face': ['Eyes', 'Nose', 'Mouth', 'Ear', 'Chin', 'Tooth'],
     'Abdomen': ['Upper Abdomen', 'Lower Abdomen', 'Right Side', 'Left Side', 'Navel', 'Lower Back'],
     'Arm': ['Upper Arm', 'Forearm', 'Elbow', 'Wrist', 'Hand', 'Shoulder'],
     'Chest': ['Upper Chest', 'Lower Chest', 'Right Side', 'Left Side', 'Breastbone', 'Ribs'],
-    'Head': ['Scalp', 'Forehead', 'Temples', 'Back of the Head', 'Ears', 'Neck'],
+    'Head': ['Scalp', 'Forehead', 'Temples', 'Back of the Head', 'Crown', 'Neck'],
     'Back': ['Upper Back', 'Lower Back', 'Right Side', 'Left Side', 'Spine', 'Shoulder Blades'],
     'Thigh': ['Upper Thigh', 'Middle Thigh', 'Lower Thigh', 'Inner Thigh', 'Outer Thigh', 'Back of Thigh'],
     'Foot': ['Heel', 'Arch', 'Ball', 'Toe', 'Instep', 'Sole'],
