@@ -41,6 +41,7 @@ body {
     left: 200px;
   }
 
+  /*결과창은 선택했을 경우에만 테두리가 하얘집니다.*/
   .result-box {
     display: flex;
     justify-content: center;
@@ -48,19 +49,18 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-
-.result-textarea {
-  width: 500px;
-  height: 350px;
-  border-radius: 20px;
-  border: none;
-  padding: 20px;
-  font-size: 1.2em;
-  background-color: transparent;
-  color: #ffffff;
-  resize: none;
-  overflow-y: auto; /* 스크롤바 추가 */
-}
+  
+  .result-textarea {
+    width: 500px;
+    height: 350px;
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    font-size: 1.2em;
+    background-color: transparent;
+    color: #ffffff;
+    resize: none;
+  }
     
     .home-button {
       background: none;
