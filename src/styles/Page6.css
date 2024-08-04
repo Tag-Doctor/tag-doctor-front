@@ -41,7 +41,6 @@ body {
     left: 200px;
   }
 
-  /*결과창은 선택했을 경우에만 테두리가 하얘집니다.*/
   .result-box {
     display: flex;
     justify-content: center;
