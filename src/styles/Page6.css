@@ -60,7 +60,7 @@ body {
   background-color: transparent;
   color: #ffffff;
   resize: none;
-  overflow-y: auto; /* 스크롤바 추가 */
+  overflow-y: auto; /* 스크롤바123 추가 */
 }
   
   .home-button {
