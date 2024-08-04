@@ -55,7 +55,7 @@ function Page5() {
         {error && <p className="error-message">{error}</p>}
       </div>
       <div className="navigation-buttons">
-        <button className="nav-button" onClick={() => navigate('/page3')}>Prev</button>
+        <button className="nav-button" onClick={() => navigate('/page2')}>Prev</button>
         <button className="nav-button next-button" onClick={handleNext}>Search</button>
       </div>
       <footer className="footer">
