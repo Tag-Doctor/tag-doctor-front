@@ -1,4 +1,4 @@
-const API_ENDPOINT = 'http://34.47.122.212:8080/gemini/chat';
+const API_ENDPOINT = 'https://34.47.122.212:8080/gemini/chat';
 
 const fetchData = async (endpoint, options) => {
   try {
