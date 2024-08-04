@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #0e1e2b;
-    height: 100vh;
+    height: 300vh;
     color: #ffffff;
     display: flex;
     flex-direction: column;
@@ -10,11 +10,12 @@ body {
   }
 
   .logo_2 {
-    width: 20vw; 
+    width: 12vw;
     max-width: 300px; 
     margin-bottom: 10px;
     align-items: center;
     justify-content: center;
+    display: flex;
   }
   
   .home-button {
