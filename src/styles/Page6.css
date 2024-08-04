@@ -49,18 +49,19 @@ body {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  
-  .result-textarea {
-    width: 500px;
-    height: 350px;
-    border-radius: 20px;
-    border: none;
-    padding: 20px;
-    font-size: 1.2em;
-    background-color: transparent;
-    color: #ffffff;
-    resize: none;
-  }
+
+.result-textarea {
+  width: 500px;
+  height: 350px;
+  border-radius: 20px;
+  border: none;
+  padding: 20px;
+  font-size: 1.2em;
+  background-color: transparent;
+  color: #ffffff;
+  resize: none;
+  overflow-y: auto; /* 스크롤바 추가 */
+}
     
     .home-button {
       background: none;
