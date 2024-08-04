@@ -1,29 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { getData } from './API';
 import HomeLogo from '../imgs/Home_Logo.png';
 import logo from '../imgs/Logo_3.png';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 import '../styles/Page6.css';
 
 function Page6() {
   const navigate = useNavigate();
   const location = useLocation();
-  const { selectedAge, selectedPart, selectedSubPart, selectedDetail, additionalInfo } = location.state || {};
-  const [diagnosticResults, setDiagnosticResults] = useState('');
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    const fetchResults = async () => {
-      try {
-        const data = await getData();
-        setDiagnosticResults(data.result);
-      } catch (error) {
-        console.error('Error data:', error);
-        setError('Error results');
-      }
-    };
-    fetchResults();
-  }, []);
+  const { response, selectedAge, selectedPart, selectedSubPart, selectedDetail, additionalInfo } = location.state || {};
+  const diagnosticResults = response?.message || '';
 
   return (
     <div className="page6-container">
@@ -45,15 +32,7 @@ function Page6() {
         </div>
       </div>
       <div className="result-box">
-        {error ? (
-          <p className="error-message">{error}</p>
-        ) : (
-          <textarea
-            className="result-textarea"
-            value={diagnosticResults}
-            disabled
-          ></textarea>
-        )}
+        <ReactMarkdown rehypePlugins={[rehypeRaw]} className="result-textarea">{diagnosticResults}</ReactMarkdown>
       </div>
       <div className="navigation-buttons">
         <button className="nav-button" onClick={() => navigate('/page1')}>Again</button>

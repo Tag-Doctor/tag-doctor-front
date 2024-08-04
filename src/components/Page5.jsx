@@ -13,23 +13,20 @@ function Page5() {
   const [error, setError] = useState('');
 
   const handleNext = async () => {
-    if (additionalInfo) {
-      try {
-        const response = await postData({
-          selectedAge,
-          selectedPart,
-          selectedSubPart,
-          selectedDetail,
-          additionalInfo,
-        });
-        navigate('/page6', { state: response });
-      } catch (error) {
-        console.error('Error POST:', error);
-        setError(`Error data: ${error.message}`);
-      }
+    try {
+      const response = await postData({
+        selectedAge,
+        selectedPart,
+        selectedSubPart,
+        selectedDetail,
+        additionalInfo,
+      });
+      navigate('/page6', { state: { response, selectedAge, selectedPart, selectedSubPart, selectedDetail, additionalInfo } });
+    } catch (error) {
+      console.error('Error POST:', error);
+      setError(`Error data: ${error.message}`);
     }
   };
-  
 
   return (
     <div className="container">
