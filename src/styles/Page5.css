@@ -176,17 +176,6 @@ body {
   height: 26px; /* 피그마에서 제시된 크기 */
 }
   
-.logo {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 80px;
-  left: 200px;
-}
-  
   .home-button {
     background: none;
     border: none;
@@ -222,11 +211,6 @@ body {
   }
   
   @media (max-width: 768px) {
-    .age-button {
-      padding: 16px; 
-      font-size: 1.1em; 
-    }
-  
     .nav-button {
       padding: 12px 20px; 
       font-size: 1.1em; 
@@ -248,11 +232,6 @@ body {
   }
   
   @media (max-width: 480px) {
-    .age-button {
-      padding: 14px; 
-      font-size: 1em;
-    }
-  
     .nav-button {
       padding: 10px 18px; 
       font-size: 1em; 

@@ -32,7 +32,7 @@ body {
   margin-top: 30px;
   margin-bottom: 50px;
   text-align: center;
-  font-size: 1.2em; 
+  font-size: 1.2em;
 }
 
 .progress-step {
@@ -101,22 +101,22 @@ body {
 }
 
 .part-button {
-  background-color: #696E79; 
+  background-color: #696E79;
   color: #fff;
-  border: none; 
+  border: none;
   border-radius: 20px; /* Increased border-radius */
   padding-left: 55px;
   padding-right: 55px;
   padding-top: 25px;
   padding-bottom: 25px;
-  font-size: 1.4em; 
+  font-size: 1.4em;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
   text-align: center;
 }
 
 .part-button.selected {
-  background-color: #01C38D; 
+  background-color: #01C38D;
 }
 
 .part-button:hover {
@@ -141,23 +141,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; /* Ensure vertical alignment */
-  margin-top: 60px; 
-  gap: 15px; 
+  margin-top: 60px;
+  gap: 15px;
 }
 
 .nav-button {
   background-color: transparent;
   color: #01C38D;
-  border: none; 
+  border: none;
   border-radius: 15px; /* 피그마 디자인에 맞게 수정 */
-  padding: 15px 25px; 
+  padding: 15px 25px;
   font-family: 'Inter', sans-serif; /* 폰트 추가 */
   font-weight: 700; /* 굵게 설정 */
   font-size: 20px; /* 피그마에서 제시된 크기 */
   line-height: 24px; /* 피그마에서 제시된 줄 높이 */
   text-align: center; /* 텍스트 중앙 정렬 */
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s; 
+  transition: background-color 0.3s, transform 0.2s;
   position: relative; /* 위치 조정 */
 }
 
@@ -169,7 +169,7 @@ body {
 .nav-button.next-button:hover {
   transform: scale(1.05);
   background-color: #01C38D;
-  box-shadow: 0 0 10px rgba(1, 195, 141, 0.6); 
+  box-shadow: 0 0 10px rgba(1, 195, 141, 0.6);
 }
 
 .nav-button:hover {
@@ -177,12 +177,12 @@ body {
 }
 
 .nav-button:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
 .nav-button.previous,
 .nav-button.skip {
-  color: #adff2f; 
+  color: #adff2f;
 }
 
 /* 추가적인 스타일 */
@@ -196,17 +196,6 @@ body {
   height: 26px; /* 피그마에서 제시된 크기 */
 }
 
-.logo {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 80px;
-  left: 200px;
-}
-
 .home-button {
   background: none;
   border: none;
@@ -216,17 +205,17 @@ body {
   align-items: center;
   cursor: pointer;
   position: absolute;
-  top: 80px; 
-  right: 200px; 
-  transition: transform 0.2s; 
+  top: 80px;
+  right: 200px;
+  transition: transform 0.2s;
 }
 
 .home-button:hover {
-  transform: scale(1.1); 
+  transform: scale(1.1);
 }
 
 .home-button:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
 .home-logo {
@@ -242,40 +231,30 @@ body {
 }
 
 @media (max-width: 768px) {
-  .age-button {
-    padding: 16px; 
-    font-size: 1.1em; 
-  }
-
   .nav-button {
-    padding: 12px 20px; 
-    font-size: 1.1em; 
+    padding: 12px 20px;
+    font-size: 1.1em;
   }
 
   .info-button {
     width: 30px;
     height: 30px;
-    font-size: 20px; 
-    top: 10px; 
-    left: 10px; 
+    font-size: 20px;
+    top: 10px;
+    left: 10px;
   }
 
   .home-button {
-    font-size: 14px; 
-    top: 10px; 
+    font-size: 14px;
+    top: 10px;
     right: 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .age-button {
-    padding: 14px; 
-    font-size: 1em;
-  }
-
   .nav-button {
-    padding: 10px 18px; 
-    font-size: 1em; 
+    padding: 10px 18px;
+    font-size: 1em;
   }
 
   .info-button {
