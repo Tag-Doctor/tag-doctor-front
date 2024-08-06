@@ -1,113 +1,112 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #0e1e2b;
-  height: 100vh;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #0e1e2b;
+    height: 100vh;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    font-size: 1vw; /* vw 단위로 폰트 크기 설정 */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1vh; /* 질문과 진행 상태 바 사이의 간격 조절 */
+  }
+
+  .results-box {
+    font-weight: 400;
+    color: #01C38D;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column; /* Items are laid out in a column */
+    justify-content: center;
+    position: absolute;
+    top: 200px;
+    left: 100px;
 }
 
-.content {
-  font-size: 1vw; /* vw 단위로 폰트 크기 설정 */
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1vh; /* 질문과 진행 상태 바 사이의 간격 조절 */
-}
-
-.results-box {
-  font-weight: 400;
-  color: #01C38D;
-  width: 250px;
-  height: 300px;
-  display: flex;
-  flex-direction: column; /* Items are laid out in a column */
-  justify-content: center;
-  position: absolute;
-  top: 200px;
-  left: 100px;
-}
-
-/*logo_3.png로 꼭!*/
-.logo_3 {
-  width: 70px;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 80px;
-  left: 200px;
-}
-
-/*결과창은 선택했을 경우에만 테두리가 하얘집니다.*/
-.result-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.result-textarea {
-  width: 500px;
-  height: 350px;
-  border-radius: 20px;
-  border: none;
-  padding: 20px;
-  font-size: 1.2em;
-  background-color: transparent;
-  color: #ffffff;
-  resize: none;
-  overflow-y: auto; /* 스크롤바123 추가 */
-}
-  
-  .home-button {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 16px;
+  /*logo_3.png로 꼭!*/
+  .logo_3 {
+    width: 70px;
+    height: 70px;
     display: flex;
     align-items: center;
-    cursor: pointer;
+    justify-content: center;
     position: absolute;
-    top: 80px; 
-    right: 200px; 
-    transition: transform 0.2s; 
+    top: 80px;
+    left: 200px;
   }
-  
-  .home-button:hover {
-    transform: scale(1.1); 
-  }
-  
-  .home-button:active {
-    transform: scale(0.95); 
-  }
-  
-  .home-logo {
-    width: 15px;
-    height: 15px;
-    margin-right: 8px;
-  }
-  
-  .footer {
+
+  /*결과창은 선택했을 경우에만 테두리가 하얘집니다.*/
+  .result-box {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   
-  @media (max-width: 768px) {
+  .result-textarea {
+    width: 500px;
+    height: 350px;
+    border-radius: 20px;
+    border: none;
+    padding: 20px;
+    font-size: 1.2em;
+    background-color: transparent;
+    color: #ffffff;
+    resize: none;
+  }
+    
     .home-button {
-      font-size: 14px; 
-      top: 10px; 
-      right: 10px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      position: absolute;
+      top: 80px; 
+      right: 200px; 
+      transition: transform 0.2s; 
     }
-  }
-  
-  @media (max-width: 480px) {
-    .home-button {
-      font-size: 12px;
+    
+    .home-button:hover {
+      transform: scale(1.1); 
     }
-  }
-  
+    
+    .home-button:active {
+      transform: scale(0.95); 
+    }
+    
+    .home-logo {
+      width: 15px;
+      height: 15px;
+      margin-right: 8px;
+    }
+    
+    .footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+    
+    @media (max-width: 768px) {
+      .home-button {
+        font-size: 14px; 
+        top: 10px; 
+        right: 10px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .home-button {
+        font-size: 12px;
+      }
+    }
+    

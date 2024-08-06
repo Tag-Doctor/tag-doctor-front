@@ -24,7 +24,7 @@ function Page2() {
 
   return (
     <div className="container">
-      <img src={logo} alt="Logo" className="logo" />
+
       <button className="home-button" onClick={() => navigate('/')}>
         <img src={HomeLogo} alt="Home" className="home-logo" />
         Home
