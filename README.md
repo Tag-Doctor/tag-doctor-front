@@ -23,7 +23,7 @@
 <table>
    <tr>
     <td align="center"><b><a href="https://github.com/bugrice">정현식</a></b></td>
-    <td align="center"><b><a href="https://github.com/thanx-To-Dev-Minsoo">김민수</a></b></td>
+    <td align="center"><b><a href="https://github.com/KimMDev">김민수</a></b></td>
     <td align="center"><b><a href="https://github.com/sso9594">신승용</a></b></td>
     <td align="center"><b><a href="https://github.com/dev-9he ">정지희</a></b></td>
   </tr>
