@@ -22,10 +22,10 @@
 
 <table>
    <tr>
-    <td align="center"><b><a href="https://github.com/bugrice">정현식</a></b></td>
-    <td align="center"><b><a href="https://github.com/eksploiter">김민수</a></b></td>
-    <td align="center"><b><a href="https://github.com/sso9594">신승용</a></b></td>
-    <td align="center"><b><a href="https://github.com/dev-9he ">정지희</a></b></td>
+    <td align="center"><b><a href="https://github.com/bugrice">bugrice</a></b></td>
+    <td align="center"><b><a href="https://github.com/eksploiter">eksploiter</a></b></td>
+    <td align="center"><b><a href="https://github.com/sso9594">sso9594</a></b></td>
+    <td align="center"><b><a href="https://github.com/dev-9he ">dev-9he</a></b></td>
   </tr>
   <tr>
     <td align="center"><b>Frontend</b></td>
